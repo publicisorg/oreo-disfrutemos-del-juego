@@ -83,7 +83,7 @@ const to = (i) => ({
 const from = (_i) => ({ x: 0, rot: 0, scale: 1.5, y: -1000 })
 // This is being used down there in the view, it interpolates rotation and scale into a css transform
 const trans = (r, s) =>
-  `perspective(2000px) rotateX(30deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`
+  `perspective(2000px) rotateX(0deg) rotateY(${r / 0}deg) rotateZ(${r}deg) scale(${s})`
 
 function Deck() {
   const [gone] = useState(() => new Set()) // The set flags all the cards that are flicked out

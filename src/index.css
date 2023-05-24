@@ -6,3 +6,35 @@
     height: 100%;
     width: 100%;
 }
+
+
+@font-face {
+    font-family: "Pluto";
+    src: url('../public/assets/pluto.ttf');
+}
+
+@font-face {
+    font-family: "Pluto Black";
+    src: url('../public/assets/pluto-black.ttf');
+}
+  
+.background-video {
+    background-image: url('../public/assets/op-002.jpg');
+    background-size: cover;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.pluto-black {
+    font-family: 'Pluto Black', Arial, Helvetica, sans-serif;;
+}
+
+.pluto {
+    font-family: 'Pluto', Arial, Helvetica, sans-serif;;
+}
+
+* {
+    font-family: 'Pluto', Arial, Helvetica, sans-serif;
+}

@@ -1,15 +1,15 @@
 import './App.css'
 import Cards from './cards'
 import { Footer } from './common/Footer'
+import { Header } from './common/Header/Header'
 import Dice from './dice'
 
 function App() {
 
   return (
-    <div className="bg-[#00449B] w-full h-screen ">
-    <div className="bg-[#0054BB] w-full h-screen ">
-      <main className='h-[90%]'>
-      <section className=' min-h-[600px] lg:w-1/4 lg:h-[90%] lg:border-2 lg:rounded-3xl drop-shadow-lg relative flex justify-center items-center'>
+    <main className="bg-[#0054BB] w-full h-screen flex flex-col justify-center items-center gap-2">
+      <Header></Header>
+      <section className='bg-[#0054BB] min-h-[600px] w-full h-screen lg:w-1/4 lg:h-[90%] lg:border-2 lg:rounded-3xl  relative'>
         <div className="z-50 absolute left-0 top-0 w-full h-full flex flex-col justify-center items-center">
 
         </div>
@@ -20,12 +20,8 @@ function App() {
           <Dice />
         </div>
       </section>
-      </main>
-      <Footer/>
-  
-    </div>
-  
-    </div>
+      <Footer></Footer>
+    </main>
   )
 }
 

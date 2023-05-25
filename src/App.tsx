@@ -1,7 +1,6 @@
 
 import './App.css'
 import Cards from './cards'
-import Deck from './cards'
 import { Footer } from './common/Footer'
 import { Header } from './common/Header/Header'
 import Dice from './dice'

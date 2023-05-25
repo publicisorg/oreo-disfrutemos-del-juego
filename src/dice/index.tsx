@@ -1,5 +1,5 @@
 import DiceBox from "@3d-dice/dice-box";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 function Dice() {
 

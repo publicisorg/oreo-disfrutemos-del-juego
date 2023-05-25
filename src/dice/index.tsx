@@ -2,7 +2,6 @@ import DiceBox from "@3d-dice/dice-box";
 import { useEffect } from "react";
 
 function Dice() {
-
     useEffect(() => {
         const diceBox = new DiceBox("#dice-box", {
             assetPath: "/assets/dice-box/", // required

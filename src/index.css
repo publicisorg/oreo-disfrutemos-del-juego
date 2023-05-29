@@ -17,7 +17,7 @@
     font-family: "Pluto Black";
     src: url('../public/assets/pluto-black.ttf');
 }
-  
+
 .background-video {
     background-image: url('../public/assets/op-002.jpg');
     background-size: cover;
@@ -28,13 +28,35 @@ body {
 }
 
 .pluto-black {
-    font-family: 'Pluto Black', Arial, Helvetica, sans-serif;;
+    font-family: 'Pluto Black', Arial, Helvetica, sans-serif;
+    ;
 }
 
 .pluto {
-    font-family: 'Pluto', Arial, Helvetica, sans-serif;;
+    font-family: 'Pluto', Arial, Helvetica, sans-serif;
+    ;
 }
 
 * {
     font-family: 'Pluto', Arial, Helvetica, sans-serif;
+}
+
+.fondoreo {
+    background: radial-gradient(circle, rgba(255, 249, 249, 0.8267682073) 0%, rgba(84, 163, 219, 0.8911939776) 17%, rgb(30, 135, 210) 50%, rgb(0, 85, 176) 84%);
+    z-index: -2;
+}
+
+.fondoreo:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://www.oreo.com.ar/img/background-miscellany.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
 }

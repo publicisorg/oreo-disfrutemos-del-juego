@@ -140,7 +140,7 @@ function Deck() {
           </animated.div>
         </animated.div>
       ))}
-      <button className="bg-white text-[#0054BA] text-xl  py-2 px-4 rounded fixed z-50 bottom-32 -rotate-12 drop-shadow-lg pluto-black" onClick={() => handleFlyOut()}>
+      <button className="bg-white text-[#0054BA] text-xl py-2 px-4 rounded fixed z-50 bottom-32 -rotate-12 drop-shadow-lg pluto-black" onClick={() => handleFlyOut()}>
        SIGUIENTE PREGUNTA
       </button>
     </>

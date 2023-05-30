@@ -17,7 +17,7 @@
     {
         "id": 3,
         "color": "bg-violet-500",
-        "text": "3"
+        "text": "Tiene otro turno."
     },
     {
         "id": 4,
@@ -27,11 +27,11 @@
     {
         "id": 5,
         "color": "bg-amber-500",
-        "text": "5"
+        "text": "Dice la respuesta y el resto tiene que adivinar la pregunta."
     },
     {
         "id": 6,
         "color": "bg-lime-500",
-        "text": "6"
+        "text": "Contestan todos."
     }
 ]

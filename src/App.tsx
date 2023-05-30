@@ -1,11 +1,24 @@
 
+import { useEffect, useState } from 'react'
 import './App.css'
 import Cards from './cards'
 import { Footer } from './common/Footer'
 import { Header } from './common/Header/Header'
 import Dice from './dice'
+import UI from './ui'
 
 function App() {
+
+  const [changeCard, toggleCards] = useState(false);
+  const [refreshDice, setRefreshDice] = useState(true);
+  const [diceResult, setDiceResult] = useState(0);
+
+  useEffect(() => {
+    setRefreshDice(false);
+    setTimeout(() => {
+      setRefreshDice(true);
+    }, 100);
+  }, [changeCard])
 
   return (
     <main className="bg-[#0054BB] lg:bg-transparent w-full h-screen flex flex-col justify-around items-center gap-8">
@@ -19,14 +32,16 @@ function App() {
         <div className="hidden lg:block rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-[#0054BB] dark:bg-[#0054BB]"></div>
         <div className="z-50 absolute left-0 top-0 w-full h-full flex flex-col justify-center items-center overflow-hidden">
           <div className='w-full h-full relative inset-0'>
-            {/* UI */}
+            <UI changeCards={toggleCards} value={changeCard} diceResult={diceResult} />
           </div>
         </div>
         <div className="z-10 absolute left-0 top-0 w-full h-full flex flex-col justify-center items-center overflow-hidden">
           <div className="h-1/2 w-full">
-            <Cards />
+            <Cards changeCard={changeCard} />
           </div>
-          <Dice />
+          <div className={`w-full h-1/2 relative box-border duration-300`}>
+            {refreshDice && <Dice setDiceResult={setDiceResult} />}
+          </div>
         </div>
       </div>
       <Footer />

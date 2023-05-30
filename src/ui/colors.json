@@ -1,0 +1,37 @@
+[
+    {
+        "id": 0,
+        "color": "bg-transparent",
+        "text": null
+    },
+    {
+        "id": 1,
+        "color": "bg-red-600",
+        "text": "Puede pasar la pregunta"
+    },
+    {
+        "id": 2,
+        "color": "bg-blue-400",
+        "text": "Elige un participante para que adivine su respuesta"
+    },
+    {
+        "id": 3,
+        "color": "bg-violet-500",
+        "text": "3"
+    },
+    {
+        "id": 4,
+        "color": "bg-blue-600",
+        "text": "Puede elegir quien contesta"
+    },
+    {
+        "id": 5,
+        "color": "bg-amber-500",
+        "text": "5"
+    },
+    {
+        "id": 6,
+        "color": "bg-lime-500",
+        "text": "6"
+    }
+]

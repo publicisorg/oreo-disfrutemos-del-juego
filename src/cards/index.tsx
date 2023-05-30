@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useSprings, animated, to as interpolate } from '@react-spring/web'
 import styles from './styles.module.css'
 
@@ -11,7 +11,7 @@ const cards = [
         categoria: "Categora 1",
         color: "azul"
       },
-      
+
     ]
   },
   {
@@ -22,7 +22,7 @@ const cards = [
         categoria: "Categora 2",
         color: "rojo"
       },
-      
+
     ]
   },
   {
@@ -33,7 +33,7 @@ const cards = [
         categoria: "Categora 3",
         color: "rojo"
       },
-      
+
     ]
   },
   {
@@ -44,7 +44,7 @@ const cards = [
         categoria: "Categora 1",
         color: "rojo"
       },
-      
+
     ]
   },
   {
@@ -55,7 +55,7 @@ const cards = [
         categoria: "Categora 1",
         color: "rojo"
       },
-      
+
     ]
   },
   {
@@ -66,7 +66,7 @@ const cards = [
         categoria: "PARA COMPARTIR",
         color: "rojo"
       },
-      
+
     ]
   },
 ]
@@ -84,27 +84,27 @@ const from = (_i) => ({ x: 0, rot: 0, scale: 1.5, y: -1000 });
 const trans = (r, s) =>
   `perspective(1900px) rotateX(-20deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`;
 
-function Deck() {
+function Deck(props:any) {
   const [gone] = useState(() => new Set());
-  const [props, api] = useSprings(cards.length, (i) => ({
+  const [propsCards, api] = useSprings(cards.length, (i) => ({
     ...to(i),
     from: from(i),
   }));
 
-  const handleFlyOut = () => {
+  useEffect(() => {
     if (gone.size === cards.length) return; // Todas las cartas ya han desaparecido
-  
+
     const nextCardIndex = cards.length - gone.size - 1;
     gone.add(nextCardIndex);
-  
+
     api.start((i) => {
       if (nextCardIndex !== i) return;
-  
+
       const isGone = gone.has(nextCardIndex);
       const x = isGone ? (100 + window.innerWidth) * (Math.random() > 0.5 ? 1 : -1) : 0;
       const rot = isGone ? (Math.random() > 0.5 ? 1 : -1) * 10 * Math.random() : 0;
       const scale = isGone ? 0.5 : 1;
-  
+
       return {
         x,
         rot,
@@ -113,20 +113,18 @@ function Deck() {
         config: { friction: 50, tension: isGone ? 200 : 500 },
       };
     });
-  
+
     if (gone.size === cards.length) {
       setTimeout(() => {
         gone.clear();
         api.start((i) => to(i));
       }, 600);
     }
-  };
-    
-  
+  }, [props.changeCard])
 
   return (
     <>
-      {props.map(({ x, y, rot, scale }, i) => (
+      {propsCards.map(({ x, y, rot, scale }, i) => (
         <animated.div className={styles.deck} key={i} style={{ x, y }}>
           <animated.div style={{ transform: interpolate([rot, scale], trans) }} className="text-center rounded-md p-[2px]">
             {cards[i].elementos.map((elemento) => (
@@ -140,17 +138,14 @@ function Deck() {
           </animated.div>
         </animated.div>
       ))}
-      <button className="bg-white text-[#0054BA] text-xl py-2 px-4 rounded fixed z-50 bottom-32 -rotate-12 drop-shadow-lg pluto-black" onClick={() => handleFlyOut()}>
-       SIGUIENTE PREGUNTA
-      </button>
     </>
   );
 }
 
-export default function Cards() {
+export default function Cards(props:any) {
   return (
     <div className={styles.container}>
-      <Deck />
+      <Deck changeCard={props.changeCard}/>
     </div>
   );
 }

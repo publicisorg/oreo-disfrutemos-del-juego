@@ -4,7 +4,7 @@ import colors from './colors.json'
 function UI(props: any) {
 
     const [diceResultColor, setDiceResultColor] = useState('');
-    const [buttonOpacity, setButtonOpacity] = useState("opacity-100 scale-100");
+    const [buttonOpacity, setButtonOpacity] = useState("opacity-0 scale-0");
     const [showMessage, setShowMessage] = useState("opacity-0 scale-0");
 
     function handleFlyOut() {

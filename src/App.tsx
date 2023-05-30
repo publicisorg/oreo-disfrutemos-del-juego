@@ -10,7 +10,7 @@ import UI from './ui'
 function App() {
 
   const [changeCard, toggleCards] = useState(false);
-  const [refreshDice, setRefreshDice] = useState(true);
+  const [refreshDice, setRefreshDice] = useState(false);
   const [diceResult, setDiceResult] = useState(0);
 
   useEffect(() => {

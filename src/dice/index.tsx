@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import DiceBox from '@3d-dice/dice-box'
 
 function Dice(props: any) {

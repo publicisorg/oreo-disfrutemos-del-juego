@@ -16,6 +16,8 @@ function Dice(props: any) {
             throwForce: 10,
             startingHeight: 10,
             restitution: 0.75,
+            lightIntensity: 1,
+            shadowTransparency: 0.9
         });
 
         diceBox.init().then(() => {

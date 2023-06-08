@@ -1,37 +1,37 @@
 [
     {
         "id": 0,
-        "color": "bg-transparent",
+        "color": "",
         "text": null
     },
     {
         "id": 1,
-        "color": "bg-red-600",
+        "color": "#dc2626",
         "text": "Puede pasar la pregunta"
     },
     {
         "id": 2,
-        "color": "bg-blue-400",
+        "color": "#60a5fa",
         "text": "Elige un participante para que adivine su respuesta"
     },
     {
         "id": 3,
-        "color": "bg-violet-500",
+        "color": "#8b5cf6",
         "text": "Tiene otro turno."
     },
     {
         "id": 4,
-        "color": "bg-blue-600",
+        "color": "#1d4ed8",
         "text": "Puede elegir quien contesta"
     },
     {
         "id": 5,
-        "color": "bg-amber-500",
+        "color": "#d97706",
         "text": "Dice la respuesta y el resto tiene que adivinar la pregunta."
     },
     {
         "id": 6,
-        "color": "bg-lime-500",
+        "color": "#84cc16",
         "text": "Contestan todos."
     }
 ]

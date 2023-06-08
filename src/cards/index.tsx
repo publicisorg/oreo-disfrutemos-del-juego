@@ -8,8 +8,7 @@ const cards = [
     elementos: [
       {
         id: "1",
-        categoria: "Categora 1",
-        color: "azul"
+        categoria: "Categora 1"
       },
 
     ]
@@ -19,8 +18,7 @@ const cards = [
     elementos: [
       {
         id: "2",
-        categoria: "Categora 2",
-        color: "rojo"
+        categoria: "Categora 2"
       },
 
     ]
@@ -30,8 +28,7 @@ const cards = [
     elementos: [
       {
         id: "2",
-        categoria: "Categora 3",
-        color: "rojo"
+        categoria: "Categora 3"
       },
 
     ]
@@ -41,8 +38,7 @@ const cards = [
     elementos: [
       {
         id: "2",
-        categoria: "Categora 1",
-        color: "rojo"
+        categoria: "Categora 1"
       },
 
     ]
@@ -52,8 +48,7 @@ const cards = [
     elementos: [
       {
         id: "2",
-        categoria: "Categora 1",
-        color: "rojo"
+        categoria: "Categora 1"
       },
 
     ]
@@ -63,8 +58,7 @@ const cards = [
     elementos: [
       {
         id: "2",
-        categoria: "PARA COMPARTIR",
-        color: "rojo"
+        categoria: "PARA COMPARTIR"
       },
 
     ]
@@ -110,7 +104,7 @@ function Deck(props:any) {
         rot,
         scale,
         delay: undefined,
-        config: { friction: 50, tension: isGone ? 200 : 500 },
+        config: { friction: 50, tension: isGone ? 90 : 500 },
       };
     });
 
@@ -118,7 +112,7 @@ function Deck(props:any) {
       setTimeout(() => {
         gone.clear();
         api.start((i) => to(i));
-      }, 600);
+      }, 300);
     }
   }, [props.changeCard])
 

@@ -8,7 +8,7 @@ function Dice(props: any) {
         const diceBox = new DiceBox("#dice-box", {
             assetPath: "/assets/dice-box/", // required
             theme: "default",
-            themeColor: '#EEEEEE',
+            themeColor: '#FEFEFE',
             offscreen: true,
             scale: 8,
             mass: 0.9,

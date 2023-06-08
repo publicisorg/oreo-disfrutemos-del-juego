@@ -28,7 +28,7 @@ function UI(props: any) {
     return (
         <>
             <div className={`${showMessage} absolute bottom-36 w-full flex justify-center items-center duration-300`}>
-                <div className={`text-white text-sm uppercase duration-300 py-4 px-8 rounded-full w-4/5 text-center shadow-lg`} style={{ backgroundColor: diceResultColor }}>
+                <div className={`text-white text-xs uppercase duration-300 py-4 px-8 rounded-full w-4/5 text-center shadow-lg`} style={{ backgroundColor: diceResultColor }}>
                     {colors[props.diceResult].text}
                 </div>
             </div>

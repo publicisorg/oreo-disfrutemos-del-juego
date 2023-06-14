@@ -29,9 +29,6 @@ function Game() {
   }, [changeCard])
 
   return (
-    <main className="bg-[#0054BB] lg:bg-transparent w-full h-screen flex flex-col justify-around items-center gap-8">
-      <Header />
-      {/*<section className="bg-[#0054BB] min-h-[600px] w-full h-screen lg:w-1/4 lg:h-[90%] lg:border-2 lg:rounded-3xl relative overflow-hidden">*/}
       <div className="relative mx-auto border-slate-800 dark:border-slate-800 lg:bg-[#0054BB] lg:border-[14px] lg:rounded-[2.5rem] h-screen w-full lg:h-full lg:w-[400px] lg:shadow-lg">
         <div className="hidden lg:block h-[32px] w-[3px] bg-slate-700 dark:bg-slate-700 absolute -left-[17px] top-[72px] rounded-l-lg"></div>
         <div className="hidden lg:block h-[46px] w-[3px] bg-slate-700 dark:bg-slate-700 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
@@ -59,8 +56,6 @@ function Game() {
           </div>
         </div>
       </div>
-      <Footer />
-    </main>
   );
 }
 

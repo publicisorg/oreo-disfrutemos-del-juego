@@ -2,69 +2,6 @@ import { useEffect, useState } from 'react'
 import { useSprings, animated, to as interpolate } from '@react-spring/web'
 import styles from './styles.module.css'
 
-const cards = [
-  {
-    pregunta: "Pregunta 1",
-    elementos: [
-      {
-        id: "1",
-        categoria: "Categora 1"
-      },
-
-    ]
-  },
-  {
-    pregunta: "Pregunta 2",
-    elementos: [
-      {
-        id: "2",
-        categoria: "Categora 2"
-      },
-
-    ]
-  },
-  {
-    pregunta: "Pregunta 3",
-    elementos: [
-      {
-        id: "2",
-        categoria: "Categora 3"
-      },
-
-    ]
-  },
-  {
-    pregunta: "Pregunta 4",
-    elementos: [
-      {
-        id: "2",
-        categoria: "Categora 1"
-      },
-
-    ]
-  },
-  {
-    pregunta: "Pregunta 5",
-    elementos: [
-      {
-        id: "2",
-        categoria: "Categora 1"
-      },
-
-    ]
-  },
-  {
-    pregunta: "SOS FELIZ CUANDO EN LA MERIENDA HAY ...",
-    elementos: [
-      {
-        id: "2",
-        categoria: "PARA COMPARTIR"
-      },
-
-    ]
-  },
-]
-
 const to = (i) => ({
   x: 0,
   y: i * -4,
@@ -79,16 +16,54 @@ const trans = (r, s) =>
   `perspective(1900px) rotateX(-20deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`;
 
 function Deck(props:any) {
+
+  const [actualCards, setActualCards] = useState<any>([]);
+
+  useEffect(() => {
+    setActualCards([
+      {
+        titulo: "PASA A LA SIGUIENTE CARTA",
+        descripcion: "Apretando el botón “siguiente” descubrís diferentes consignas para divertirte en familia.",
+        elementos: [
+          {
+            id: "3",
+            categoria: "Tutorial"
+          },
+        ]
+      },
+      {
+        titulo: "TIRÁ EL DADO",
+        descripcion: "El color del dado determina qué pasa en el juego.",
+        elementos: [
+          {
+            id: "3",
+            categoria: "Tutorial"
+          },
+        ]
+      },
+      {
+        titulo: "SE JUEGA POR TURNO",
+        descripcion: "Cuando veas la carta en pantalla, podés empezar.",
+        elementos: [
+          {
+            id: "3",
+            categoria: "Tutorial"
+          },
+        ]
+      }
+    ]);
+  }, [])
+
   const [gone] = useState(() => new Set());
-  const [propsCards, api] = useSprings(cards.length, (i) => ({
+  const [propsCards, api] = useSprings(actualCards.length, (i) => ({
     ...to(i),
     from: from(i),
   }));
 
   useEffect(() => {
-    if (gone.size === cards.length) return; // Todas las cartas ya han desaparecido
+    if (gone.size === actualCards.length) return; // Todas las cartas ya han desaparecido
 
-    const nextCardIndex = cards.length - gone.size - 1;
+    const nextCardIndex = actualCards.length - gone.size - 1;
     gone.add(nextCardIndex);
 
     api.start((i) => {
@@ -108,7 +83,7 @@ function Deck(props:any) {
       };
     });
 
-    if (gone.size === cards.length) {
+    if (gone.size === actualCards.length) {
       setTimeout(() => {
         gone.clear();
         api.start((i) => to(i));
@@ -118,16 +93,28 @@ function Deck(props:any) {
 
   return (
     <>
-      {propsCards.map(({ x, y, rot, scale }, i) => (
+      {props.tutorial && propsCards.map(({ x, y, rot, scale }, i) => (
         <animated.div className={styles.deck} key={i} style={{ x, y }}>
           <animated.div style={{ transform: interpolate([rot, scale], trans) }} className="text-center rounded-md p-[2px]">
-            {cards[i].elementos.map((elemento) => (
+            {actualCards[i].elementos.map((elemento) => (
               <p key={elemento.id} className="bg-[#0054BA] text-white rounded-t-md font-regular text-[10px] py-1">
                 {elemento.categoria}
               </p>
             ))}
             <p className="text-[20px] text-[#0054BA] justify-center items-center font-bold mt-5 pluto-black w-9/12 mx-auto">
-              {cards[i].pregunta}
+              {actualCards[i].pregunta}
+            </p>
+          </animated.div>
+        </animated.div>
+      ))}
+      {!props.tutorial && propsCards.map(({ x, y, rot, scale }, i) => (
+        <animated.div className={styles.deck} key={i} style={{ x, y }}>
+          <animated.div style={{ transform: interpolate([rot, scale], trans) }} className="flex justify-center items-center flex-col rounded-md p-[2px]">
+            <p className="text-[20px] text-[#0054BA] pluto-black justify-center items-center font-bold pluto-black w-5/6 mx-auto text-center">
+              {actualCards[i].titulo}
+            </p>
+            <p className="text-[12px] text-[#0054BA] pluto justify-center items-center pluto-black w-5/6 mx-auto text-center">
+              {actualCards[i].descripcion}
             </p>
           </animated.div>
         </animated.div>

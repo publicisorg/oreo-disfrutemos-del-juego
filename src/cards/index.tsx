@@ -24,6 +24,7 @@ function Deck(props:any) {
       {
         titulo: "PASA A LA SIGUIENTE CARTA",
         descripcion: "Apretando el botón “siguiente” descubrís diferentes consignas para divertirte en familia.",
+        pregunta: "Error",
         elementos: [
           {
             id: "3",
@@ -34,6 +35,7 @@ function Deck(props:any) {
       {
         titulo: "TIRÁ EL DADO",
         descripcion: "El color del dado determina qué pasa en el juego.",
+        pregunta: "Error",
         elementos: [
           {
             id: "3",
@@ -44,6 +46,7 @@ function Deck(props:any) {
       {
         titulo: "SE JUEGA POR TURNO",
         descripcion: "Cuando veas la carta en pantalla, podés empezar.",
+        pregunta: "Error",
         elementos: [
           {
             id: "3",
@@ -70,7 +73,9 @@ function Deck(props:any) {
       if (nextCardIndex !== i) return;
 
       const isGone = gone.has(nextCardIndex);
-      const x = isGone ? (100 + window.innerWidth) * (Math.random() > 0.5 ? 1 : -1) : 0;
+      //x es para que lado se va, si se elimina o modifica math random cambia la direccion
+      //const x = isGone ? (100 + window.innerWidth) * (Math.random() > 0.5 ? 1 : -1) : 0;
+      const x = isGone ? (100 + window.innerWidth) : 0;
       const rot = isGone ? (Math.random() > 0.5 ? 1 : -1) * 10 * Math.random() : 0;
       const scale = isGone ? 0.5 : 1;
 
@@ -93,7 +98,7 @@ function Deck(props:any) {
 
   return (
     <>
-      {props.tutorial && propsCards.map(({ x, y, rot, scale }, i) => (
+      {!props.tutorial && propsCards.map(({ x, y, rot, scale }, i) => (
         <animated.div className={styles.deck} key={i} style={{ x, y }}>
           <animated.div style={{ transform: interpolate([rot, scale], trans) }} className="text-center rounded-md p-[2px]">
             {actualCards[i].elementos.map((elemento) => (
@@ -107,7 +112,7 @@ function Deck(props:any) {
           </animated.div>
         </animated.div>
       ))}
-      {!props.tutorial && propsCards.map(({ x, y, rot, scale }, i) => (
+      {props.tutorial && propsCards.map(({ x, y, rot, scale }, i) => (
         <animated.div className={styles.deck} key={i} style={{ x, y }}>
           <animated.div style={{ transform: interpolate([rot, scale], trans) }} className="flex justify-center items-center flex-col rounded-md p-[2px]">
             <p className="text-[20px] text-[#0054BA] pluto-black justify-center items-center font-bold pluto-black w-5/6 mx-auto text-center">
@@ -126,7 +131,7 @@ function Deck(props:any) {
 export default function Cards(props:any) {
   return (
     <div className={styles.container}>
-      <Deck changeCard={props.changeCard}/>
+      <Deck tutorial={props.tutorial} changeCard={props.changeCard}/>
     </div>
   );
 }

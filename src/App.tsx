@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-      <main className={`bg-[#0054BB] lg:bg-transparent w-full h-screen flex flex-col justify-around items-center gap-8 duration-300`}>
+      <main className={`bg-[#0054BB] w-full h-screen flex flex-col justify-between items-center gap-8 duration-300`}>
         <Header />
         {!start && <Home setStart={handleChange} />}
         {start && <Game />}

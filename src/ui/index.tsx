@@ -37,13 +37,13 @@ function UI(props: any) {
     return (
         <>
             <div className={`${showMessage} absolute bottom-24 w-full flex justify-center items-center duration-300`}>
-                <div className={`text-white text-xs uppercase duration-300 py-4 px-8 rounded-full w-4/5 text-center shadow-lg`} style={{ backgroundColor: diceResultColor }}>
+                <div className={`text-white text-xs uppercase duration-300 py-4 px-8 rounded-full w-4/5 text-center shadow-[4px_4px_0px_0px_rgba(0,0,0,0.25)]`} style={{ backgroundColor: diceResultColor }}>
                     {colors[props.diceResult].text}
                 </div>
             </div>
 
             <div className={`${buttonOpacity} w-full bottom-0 h-24 text-white absolute flex justify-center items-center duration-300`}>
-                <button className="bg-white text-[#0054BA] text-xl py-2 px-4 rounded absolute z-50 bottom-4 -rotate-6 drop-shadow-lg pluto-black" onClick={() => handleFlyOut()}>
+                <button className="bg-white text-[#0054BA] text-xl py-3 px-6 rounded absolute z-50 bottom-4 -rotate-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.25)] pluto-black" onClick={() => handleFlyOut()}>
                     {props.tutorial && buttonLabel}
                     {!props.tutorial && "SIGUIENTE PREGUNTA"}
                 </button>

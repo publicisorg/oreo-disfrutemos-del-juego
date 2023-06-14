@@ -2,7 +2,8 @@ import { useState } from "react";
 import Game from "./game";
 import Home from "./home";
 import { Header } from "./common/Header/Header";
-import { FooterStart } from "./common/Footer";
+import { Footer, FooterStart } from "./common/Footer";
+import Background from "./common/Background";
 
 function App() {
 
@@ -14,11 +15,13 @@ function App() {
 
   return (
     <>
-      <main className={`bg-[#0054BB] w-full h-screen flex flex-col justify-between items-center gap-8 duration-300`}>
+      <main className={`w-full h-screen flex flex-col justify-between items-center gap-8 duration-300`}>
+        <Background/>
         <Header />
         {!start && <Home setStart={handleChange} />}
         {start && <Game />}
-        <FooterStart />
+        {!start && <FooterStart />}
+        {start && <Footer />}
       </main>
     </>
   );

@@ -21,6 +21,7 @@ function UI(props: any) {
     useEffect(() => {
         if (props.tutorial) {
             setButtonOpacity("opacity-100 scale-100");
+            
         }
     }, [props.tutorialStage])
 

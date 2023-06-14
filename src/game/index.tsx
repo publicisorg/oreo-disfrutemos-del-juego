@@ -3,8 +3,6 @@ import { useEffect, useState } from 'react'
 import UI from '../ui';
 import Cards from '../cards';
 import Dice from '../dice';
-import { Footer } from '../common/Footer';
-import { Header } from '../common/Header/Header';
 
 function Game() {
 

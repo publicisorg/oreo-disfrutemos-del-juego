@@ -1,6 +1,4 @@
-import { useEffect, useState } from 'react';
-import { FooterStart } from '../common/Footer';
-import { Header } from '../common/Header/Header';
+import { useState } from 'react';
 
 function Home(props: any) {
 

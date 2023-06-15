@@ -15,7 +15,7 @@ function Dice(props: any) {
             themeColor: '#FEFEFE',
             offscreen: false,
             scale: 11,
-            mass: 0.9,
+            mass: 2,
             friction: 0.8,
             throwForce: 10,
             startingHeight: 4,

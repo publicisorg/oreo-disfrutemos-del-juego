@@ -4,9 +4,9 @@ import styles from './styles.module.css'
 
 const to = (i) => ({
   x: 0,
-  y: i * -4,
+  y: 0,//i * -4,
   scale: 1,
-  rot: -10 + Math.random() * 20,
+  rot: 0,//-10 + Math.random() * 20,
   delay: i * 100,
 });
 
@@ -76,7 +76,7 @@ function Deck(props:any) {
       //x es para que lado se va, si se elimina o modifica math random cambia la direccion
       //const x = isGone ? (100 + window.innerWidth) * (Math.random() > 0.5 ? 1 : -1) : 0;
       const x = isGone ? (100 + window.innerWidth) : 0;
-      const rot = isGone ? (Math.random() > 0.5 ? 1 : -1) * 10 * Math.random() : 0;
+      const rot = isGone ? 0 : 0;//(Math.random() > 0.5 ? 1 : -1) * 10 * Math.random() : 0;
       const scale = isGone ? 0.5 : 1;
 
       return {

@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <main className={`w-full h-screen flex flex-col justify-between items-center gap-8 duration-300`}>
+      <main className={`w-full h-screen flex flex-col justify-between items-center gap-2 duration-300 overflow-hidden`}>
         <Background/>
         <Header />
         {!start && <Home setStart={handleChange} setOpacity={setOpacity}/>}

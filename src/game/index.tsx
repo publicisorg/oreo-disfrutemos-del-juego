@@ -19,6 +19,7 @@ function Game() {
   useEffect(() => {
     if (tutorialStage == 4) {
       isTutorial(false);
+      setRefreshDice(!refreshDice);
     }
   }, [tutorialStage])
 

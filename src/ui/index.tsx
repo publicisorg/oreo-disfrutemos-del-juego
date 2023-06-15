@@ -19,8 +19,8 @@ function UI(props: any) {
     function handleNext() {
         if (props.tutorial) {
             setOpacity('opacity-0');
+            props.setTutorialStage(props.tutorialStage + 1);
             setTimeout(() => {
-                props.setTutorialStage(props.tutorialStage + 1);
                 setButtonLabel("SIGUIENTE");
             }, 300);
             setTimeout(() => {

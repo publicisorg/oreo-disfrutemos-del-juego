@@ -27,7 +27,7 @@ function Home(props: any) {
     }
 
     return (
-        <div className="relative mx-autoh-screen w-full lg:h-full lg:w-[400px]">
+        <div className="relative mx-autoh-screen w-full h-full lg:w-[400px]">
             <div className={`w-full h-full inset-0 flex justify-center items-center text-white text-6xl relative duration-300 ${opacity}`}>
                 <div className={`relative flex justify-center items-center ${rotation} ${scale} ${duration}`}>
                     <h1 className={`pluto-black text-center`}>EL JUEGO DE OREO</h1>

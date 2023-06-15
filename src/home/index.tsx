@@ -18,9 +18,11 @@ function Home(props: any) {
         }, 200);
         setTimeout(() => {
             setOpacity('opacity-0');
+            props.setOpacity('opacity-0');
         }, 700);
         setTimeout(() => {
             props.setStart(true);
+            props.setOpacity('opacity-100');
         }, 1000);
     }
 

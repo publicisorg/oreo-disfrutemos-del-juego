@@ -13,9 +13,9 @@ const to = (i) => ({
 const from = (_i) => ({ x: 0, rot: 0, scale: 1.5, y: -1000 });
 
 const trans = (r, s) =>
-  `perspective(1900px) rotateX(-20deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`;
+  `perspective(none) rotateX(-20deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`;
 
-function Deck(props:any) {
+function Deck(props: any) {
 
   const [actualCards, setActualCards] = useState<any>([]);
 
@@ -25,6 +25,7 @@ function Deck(props:any) {
         titulo: "PASA A LA SIGUIENTE CARTA",
         descripcion: "Apretando el botón “siguiente” descubrís diferentes consignas para divertirte en familia.",
         pregunta: "Pregunta",
+        index: 3,
         elementos: [
           {
             id: "3",
@@ -36,6 +37,7 @@ function Deck(props:any) {
         titulo: "TIRÁ EL DADO",
         descripcion: "El color del dado determina qué pasa en el juego.",
         pregunta: "Pregunta",
+        index: 2,
         elementos: [
           {
             id: "3",
@@ -47,6 +49,7 @@ function Deck(props:any) {
         titulo: "SE JUEGA POR TURNO",
         descripcion: "Cuando veas la carta en pantalla, podés empezar.",
         pregunta: "Pregunta",
+        index: 1,
         elementos: [
           {
             id: "3",
@@ -121,6 +124,12 @@ function Deck(props:any) {
             <p className="text-[12px] text-[#0054BA] pluto justify-center items-center pluto-black w-5/6 mx-auto text-center">
               {actualCards[i].descripcion}
             </p>
+            <div className='flex flex-row justify-center items-center w-full gap-1 absolute bottom-2'>
+              <div className={`rounded-full aspect-square h-3 ${actualCards[i].index == 1 ? "border-[#0054BA] bg-[#0054BA]" : "border-[#D9D9D9] bg-transparent"} border-2`}/>
+              <div className={`rounded-full aspect-square h-3 ${actualCards[i].index == 2 ? "border-[#0054BA] bg-[#0054BA]" : "border-[#D9D9D9] bg-transparent"} border-2`}/>
+              <div className={`rounded-full aspect-square h-3 ${actualCards[i].index == 3 ? "border-[#0054BA] bg-[#0054BA]" : "border-[#D9D9D9] bg-transparent"} border-2`}/>
+            </div>
+
           </animated.div>
         </animated.div>
       ))}
@@ -128,10 +137,10 @@ function Deck(props:any) {
   );
 }
 
-export default function Cards(props:any) {
+export default function Cards(props: any) {
   return (
     <div className={styles.container}>
-      <Deck tutorial={props.tutorial} changeCard={props.changeCard}/>
+      <Deck tutorial={props.tutorial} changeCard={props.changeCard} />
     </div>
   );
 }

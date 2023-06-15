@@ -24,33 +24,33 @@ function Deck(props:any) {
       {
         titulo: "PASA A LA SIGUIENTE CARTA",
         descripcion: "Apretando el botón “siguiente” descubrís diferentes consignas para divertirte en familia.",
-        pregunta: "Error",
+        pregunta: "Pregunta",
         elementos: [
           {
             id: "3",
-            categoria: "Tutorial"
+            categoria: "Categoria"
           },
         ]
       },
       {
         titulo: "TIRÁ EL DADO",
         descripcion: "El color del dado determina qué pasa en el juego.",
-        pregunta: "Error",
+        pregunta: "Pregunta",
         elementos: [
           {
             id: "3",
-            categoria: "Tutorial"
+            categoria: "Categoria"
           },
         ]
       },
       {
         titulo: "SE JUEGA POR TURNO",
         descripcion: "Cuando veas la carta en pantalla, podés empezar.",
-        pregunta: "Error",
+        pregunta: "Pregunta",
         elementos: [
           {
             id: "3",
-            categoria: "Tutorial"
+            categoria: "Categoria"
           },
         ]
       }

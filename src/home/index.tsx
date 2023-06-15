@@ -32,7 +32,7 @@ function Home(props: any) {
                 <div className={`relative flex justify-center items-center ${rotation} ${scale} ${duration}`}>
                     <h1 className={`pluto-black text-center`}>EL JUEGO DE OREO</h1>
                     <button onClick={() => { hideHome() }}
-                        className={`bg-white text-[#0054BA] text-2xl py-3 px-6 rounded absolute -bottom-12 mx-auto z-50 pluto-black shadow-[4px_4px_0px_0px_rgba(0,0,0,0.25)] -rotate-6`}>
+                        className={`bg-[#F2F1F1] text-[#0054BA] text-2xl py-3 px-6 rounded absolute -bottom-12 mx-auto z-50 pluto-black shadow-[4px_4px_0px_0px_rgba(0,0,0,0.25)] -rotate-6`}>
                         ¡JUGUEMOS!
                     </button>
                 </div>

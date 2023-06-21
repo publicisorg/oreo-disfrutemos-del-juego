@@ -6,7 +6,7 @@ function DatosPersonales(props: any) {
     const [bgopacity, setBgOpacity] = useState("opacity-0");
     const [formOpacity, setFormOpacity] = useState("opacity-0");
     const [thanksOpacity, setThanksOpacity] = useState("opacity-0");
-    const [tickAnim, setTickAnim] = useState("scale-0 stroke-lime-900 rotate-180");
+    const [tickAnim, setTickAnim] = useState("scale-0 stroke-lime-900 rotate-12");
     const [tickDuration, setTickDuration] = useState("duration-500");
     const [containerOpacity, setContainerOpacity] = useState("opacity-0 scale-0");
 
@@ -45,7 +45,7 @@ function DatosPersonales(props: any) {
     }
 
     function tickAnimation() {
-        setTickAnim("scale-110 stroke-lime-400 -rotate-12");
+        setTickAnim("scale-110 stroke-lime-400 -rotate-3");
         setTimeout(() => {
             setTickDuration("duration-200");
             setTickAnim("scale-100 stroke-white rotate-0");

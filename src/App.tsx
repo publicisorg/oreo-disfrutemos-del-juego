@@ -11,7 +11,7 @@ function App() {
   const [start, setStart] = useState(false);
   const [countCards, setCardsCount] = useState(0);
   const [opacity, setOpacity] = useState("opacity-100");
-  const [showPopup, setShowPopup] = useState(true);
+  const [showPopup, setShowPopup] = useState(false);
 
   function handleChange(data: any) {
       setStart(data);

@@ -20,6 +20,11 @@ function UI(props: any) {
         }
     }
 
+    function handleNextTutorial() {
+        props.setTutorialStage(props.tutorialStage + 1);
+        props.changeCards(!props.value);
+    }
+
     //props.setTutorialStage(props.tutorialStage + 1);
 
     function handleNext() {
@@ -45,6 +50,12 @@ function UI(props: any) {
         if (props.tutorial && props.tutorialStage < 4) {
             setButtonOpacity("opacity-100 scale-100");
         }
+        if (props.tutorialStage == 4) {
+            setButtonOpacity("opacity-0 scale-0");
+            setTimeout(() => {
+                setButtonLabel("SIGUIENTE PREGUNTA");
+            }, 310);
+        }
     }, [props.tutorialStage])
 
     useEffect(() => {
@@ -60,9 +71,8 @@ function UI(props: any) {
 
     return (
         <>
-            <div className="h-2/3 w-full bottom-0 absolute" onClick={() => handleFlyOut()}>
-
-            </div>
+            <div className="h-1/3 w-full top-0 absolute" onClick={() => handleNextTutorial()} />
+            <div className="h-2/3 w-full bottom-0 absolute" onClick={() => handleFlyOut()} />
             <div className={`${showMessage} absolute bottom-24 w-full flex justify-center items-center duration-300`}>
                 <div className={`max-w-[300px] text-white text-xs uppercase duration-300 py-4 px-8 rounded-full w-4/5 text-center shadow-[4px_4px_0px_0px_rgba(0,0,0,0.25)]`} style={{ backgroundColor: diceResultColor }}>
                     {colors[props.diceResult].text}

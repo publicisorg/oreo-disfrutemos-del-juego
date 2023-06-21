@@ -54,7 +54,7 @@ function DatosPersonales(props: any) {
 
     return (
         <>
-            <div className={`${bgopacity} z-[100] h-full bg-black/60 w-full absolute duration-300`}></div>
+            <div className={`${bgopacity} z-[100] h-full bg-black/60 w-full max-w-[400px] absolute duration-300`}></div>
             <div className={`${containerOpacity} z-[100] h-full w-full absolute flex justify-center items-center duration-300`}>
                 <div className="w-[90%] bg-[#0055B0] relative rounded-3xl text-white duration-300">
                     <div className="absolute -top-10 mx-auto w-full flex justify-center items-center">

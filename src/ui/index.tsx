@@ -10,22 +10,26 @@ function UI(props: any) {
     const [buttonLabel, setButtonLabel] = useState("EMPEZAR");
 
     function handleFlyOut() {
-        props.changeCards(!props.value);
-        setButtonOpacity("opacity-0 scale-0");
-        setShowMessage("opacity-0 scale-0");
-        handleNext();
+        if (props.diceStop) {
+            if (!props.tutorial) {
+                props.changeCards(!props.value);
+            }
+            setButtonOpacity("opacity-0 scale-0");
+            setShowMessage("opacity-0 scale-0");
+            handleNext();
+        }
     }
+
+    //props.setTutorialStage(props.tutorialStage + 1);
 
     function handleNext() {
         if (props.tutorial) {
             setOpacity('opacity-0');
-            props.setTutorialStage(props.tutorialStage + 1);
             setTimeout(() => {
-                setButtonLabel("SIGUIENTE");
-            }, 300);
-            setTimeout(() => {
+                setButtonLabel("SIGUIENTE PREGUNTA");
+                props.setTutorialStage(4);
                 setOpacity('opacity-100');
-            }, 310);
+            }, 300);
         } else {
             setOpacity('opacity-0');
             setTimeout(() => {
@@ -38,25 +42,29 @@ function UI(props: any) {
     }
 
     useEffect(() => {
-        if (props.tutorial) {
+        if (props.tutorial && props.tutorialStage < 4) {
             setButtonOpacity("opacity-100 scale-100");
         }
     }, [props.tutorialStage])
 
     useEffect(() => {
         setDiceResultColor(colors[props.diceResult].color);
-        if (props.diceResult != 0) {
+        if (props.diceResult != 0 && props.diceStop) {
             setShowMessage("opacity-100 scale-100");
+            setButtonOpacity("opacity-100 scale-100");
+            console.log("ESTO?");
         } else {
             setShowMessage("opacity-0 scale-0");
         }
-        setButtonOpacity("opacity-100 scale-100");
     }, [props.diceResult, props.diceStop])
 
     return (
         <>
+            <div className="h-2/3 w-full bottom-0 absolute" onClick={() => handleFlyOut()}>
+
+            </div>
             <div className={`${showMessage} absolute bottom-24 w-full flex justify-center items-center duration-300`}>
-                <div className={`text-white text-xs uppercase duration-300 py-4 px-8 rounded-full w-4/5 text-center shadow-[4px_4px_0px_0px_rgba(0,0,0,0.25)]`} style={{ backgroundColor: diceResultColor }}>
+                <div className={`max-w-[300px] text-white text-xs uppercase duration-300 py-4 px-8 rounded-full w-4/5 text-center shadow-[4px_4px_0px_0px_rgba(0,0,0,0.25)]`} style={{ backgroundColor: diceResultColor }}>
                     {colors[props.diceResult].text}
                 </div>
             </div>

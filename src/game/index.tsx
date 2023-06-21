@@ -35,7 +35,7 @@ function Game() {
   }, [changeCard])
 
   return (
-    <div className="relative mx-auto lg:bg-[#0054BB] w-full h-full lg:w-[400px]">
+    <div className="relative mx-auto lg:bg-[#0054BB] w-full h-full lg:w-[600px]">
       <div className='z-50 w-full h-full relative inset-0'>
         <UI
           changeCards={toggleCards}
@@ -46,6 +46,7 @@ function Game() {
           tutorialStage={tutorialStage}
           setTutorialStage={setTutorialStage} 
           diceStop={diceStop}
+          isTutorial={isTutorial}
           />
       </div>
       <div className="z-10 absolute left-0 top-0 w-full h-full flex flex-col justify-center items-center overflow-hidden">

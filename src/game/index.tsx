@@ -4,7 +4,7 @@ import UI from '../ui';
 import Cards from '../cards';
 import Dice from '../dice';
 
-function Game() {
+function Game(props:any) {
 
   const [changeCard, toggleCards] = useState(false);
   const [refreshDice, setRefreshDice] = useState(false);
@@ -51,7 +51,7 @@ function Game() {
       </div>
       <div className="z-10 absolute left-0 top-0 w-full h-full flex flex-col justify-center items-center overflow-hidden">
         <div className="h-1/3 w-full">
-          <Cards changeCard={changeCard} tutorial={tutorial} />
+          <Cards countCards={props.countCards} changeCard={changeCard} tutorial={tutorial} setCardsCount={props.setCardsCount}/>
         </div>
         <div className={`w-full h-2/3 relative box-border duration-300`}>
           {true && <Dice setDiceStop={setDiceStop} setDiceResult={setDiceResult} tutorial={tutorial} tutorialStage={tutorialStage} refreshDice={refreshDice} />}

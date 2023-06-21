@@ -18,6 +18,7 @@ const trans = (r, s) =>
 function Deck(props: any) {
 
   const [actualCards, setActualCards] = useState<any>([]);
+  const [countCards, setCountCards] = useState(0);
 
   useEffect(() => {
     setActualCards([
@@ -70,6 +71,9 @@ function Deck(props: any) {
     if (gone.size === actualCards.length) return; // Todas las cartas ya han desaparecido
 
     const nextCardIndex = actualCards.length - gone.size - 1;
+    if (!props.isTutorial) {
+      props.setCardsCount(props.countCards + 1);
+    }
     gone.add(nextCardIndex);
 
     api.start((i) => {
@@ -98,6 +102,12 @@ function Deck(props: any) {
       }, 300);
     }
   }, [props.changeCard])
+
+  useEffect(() => {
+    if (countCards == 5) {
+
+    }
+  }, [countCards])
 
   return (
     <>
@@ -140,7 +150,7 @@ function Deck(props: any) {
 export default function Cards(props: any) {
   return (
     <div className={styles.container}>
-      <Deck tutorial={props.tutorial} changeCard={props.changeCard} />
+      <Deck tutorial={props.tutorial} changeCard={props.changeCard} setCardsCount={props.setCardsCount} countCards={props.countCards}/>
     </div>
   );
 }

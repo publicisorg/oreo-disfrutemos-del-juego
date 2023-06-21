@@ -13,11 +13,10 @@ function Dice(props: any) {
             assetPath: "/assets/dice-box/", // required
             theme: "default",
             themeColor: '#FEFEFE',
-            offscreen: false,
+            offscreen: true,
             scale: 11,
             mass: 2,
             friction: 0.8,
-            throwForce: 10,
             startingHeight: 4,
             restitution: 0.75,
             lightIntensity: 1,
@@ -37,8 +36,10 @@ function Dice(props: any) {
         if (diceBoxReady) {
             if ((props.tutorialStage == 2 && props.tutorial == true) || props.tutorial == false) {
                 diceBox.roll('1d6');
-                diceBox.onRollComplete = (results) => {
-                    props.setDiceResult(results[0].value);
+                props.setDiceStop(false);
+                diceBox.onDieComplete = (results) => {
+                    props.setDiceResult(results.value);
+                    props.setDiceStop(true);
                 }
             }
         }

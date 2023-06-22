@@ -69,7 +69,7 @@ function Deck(props: any) {
     if (gone.size === actualCards.length) return; // Todas las cartas ya han desaparecido
 
     const nextCardIndex = actualCards.length - gone.size - 1;
-    if (!props.isTutorial) {
+    if (!props.tutorial) {
       props.setCardsCount(props.countCards + 1);
     }
     gone.add(nextCardIndex);

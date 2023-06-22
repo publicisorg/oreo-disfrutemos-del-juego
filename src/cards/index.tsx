@@ -14,7 +14,7 @@ function Deck(props: any) {
     x: 0,
     y: 0,//i * -4,
     scale: 1,
-    rot: 0,//-10 + Math.random() * 20,
+    rot: -5 + Math.random() * 10,
     delay: i * cardsDelay,
   });
 
@@ -125,8 +125,8 @@ function Deck(props: any) {
 
   return (
     <>
-      <CardsBackground />
-      <div className={`${styles.deck} mt-2`}>
+      {false && <CardsBackground />}
+      {false && <div className={`${styles.deck} mt-2`}>
           <div className="text-center rounded-[17px] p-[2px]" style={{boxShadow: '0 1px 1px 2px rgba(50, 50, 73, 0.15), 0 10px 10px -10px rgba(50, 50, 73, 0.3)'}}>
             <p className="bg-[#0054BA] text-white rounded-t-[15px] font-regular text-[12px] py-1 uppercase">
               
@@ -135,11 +135,11 @@ function Deck(props: any) {
               
             </p>
           </div>
-        </div>
+        </div>}
       {!props.tutorial && propsCards.map(({ x, y, rot, scale }, i) => (
         <animated.div className={styles.deck} key={i} style={{ x, y }}>
-          <animated.div style={{ transform: interpolate([rot, scale], trans) }} className="text-center rounded-[16px] p-[1px]">
-            <p key={actualCards[i].id} className="bg-[#0054BA] text-white rounded-t-[15px] font-regular text-[12px] py-1 uppercase">
+          <animated.div style={{ transform: interpolate([rot, scale], trans), boxShadow: '1px 1px 3px #00000015' }} className="text-center rounded-[16px] p-[1px]">
+            <p key={actualCards[i].id} className="bg-[#0054BA] text-white rounded-t-[15px] font-regular text-[12px] py-1 uppercase" >
               {actualCards[i].categoria}
             </p>
             <p className="text-[16px] text-[#0054BA] justify-center items-center font-bold pluto-black mx-auto w-11/12 h-[85%] flex uppercase">

@@ -1,0 +1,502 @@
+[
+  {
+    "id": 1,
+    "pregunta": "¿Si todo el año fuera vacaciones? ¿Qué harías?",
+    "categoria": "Para pensar"
+  },
+  {
+    "id": 2,
+    "pregunta": "¿En qué momentos el tiempo pasa más rápido? ¿Por qué?",
+    "categoria": "Para compartir"
+  },
+  {
+    "id": 3,
+    "pregunta": "En 10 segundos inventá una receta para la merienda",
+    "categoria": "Desafios"
+  },
+  {
+    "id": 4,
+    "pregunta": "Si el tiempo se detuviera: ¿Qué pasaría?",
+    "categoria": "Elecciones"
+  },
+  {
+    "id": 5,
+    "pregunta": "¿Qué te gusta hacer en tu tiempo libre?",
+    "categoria": "Para pensar"
+  },
+  {
+    "id": 6,
+    "pregunta": "Si tuvieras una máquina del tiempo",
+    "categoria": "Para compartir"
+  },
+  {
+    "id": 7,
+    "pregunta": "Arma tu ranking de 3 momentos más divertidos.",
+    "categoria": "Desafios"
+  },
+  {
+    "id": 8,
+    "pregunta": "Elegí un día de la semana. ¿Por qué lo preferís?",
+    "categoria": "Elecciones"
+  },
+  {
+    "id": 9,
+    "pregunta": "¿Cuándo fue la última vez que te aburriste?",
+    "categoria": "Para pensar"
+  },
+  {
+    "id": 10,
+    "pregunta": "Tenés 24 hs para hacer LO QUE QUIERAS: ¿Qué harías?",
+    "categoria": "Para compartir"
+  },
+  {
+    "id": 11,
+    "pregunta": "Si pudieras regalarle un pasaje a una persona del juego",
+    "categoria": "Desafios"
+  },
+  {
+    "id": 12,
+    "pregunta": "Qué te pone de mejor humor: ¿Viernes por la tarde o Sábado por la mañana? ¿Por qué?",
+    "categoria": "Elecciones"
+  },
+  {
+    "id": 13,
+    "pregunta": "¿Qué te gustaría saber del futuro?",
+    "categoria": "Para pensar"
+  },
+  {
+    "id": 14,
+    "pregunta": "¿Qué te pone de buen humor a la mañana?",
+    "categoria": "Para compartir"
+  },
+  {
+    "id": 15,
+    "pregunta": "Tenés 30 segundos para que el resto adivine la palabra “tiempo”",
+    "categoria": "Desafios"
+  },
+  {
+    "id": 16,
+    "pregunta": "¿Qué actividad compartirías con la persona que está a tu derecha?",
+    "categoria": "Elecciones"
+  },
+  {
+    "id": 17,
+    "pregunta": "¿Sería mejor si los días duraran más horas? ¿Por qué?",
+    "categoria": "Para pensar"
+  },
+  {
+    "id": 18,
+    "pregunta": "Para una merienda",
+    "categoria": "Para compartir"
+  },
+  {
+    "id": 19,
+    "pregunta": "Cantá tu canción favorita a una velocidad de 2x",
+    "categoria": "Desafios"
+  },
+  {
+    "id": 20,
+    "pregunta": "¿Qué día de la semana prefieres para relajarte?",
+    "categoria": "Elecciones"
+  },
+  {
+    "id": 21,
+    "pregunta": "Si pudieras viajar en el tiempo, ¿a qué época te gustaría ir?",
+    "categoria": "Para pensar"
+  },
+  {
+    "id": 22,
+    "pregunta": "Compartí una anécdota divertida que te haya sucedido en el pasado",
+    "categoria": "Para compartir"
+  },
+  {
+    "id": 23,
+    "pregunta": "Inventa una historia sobre cómo pasarías un día con 48 horas",
+    "categoria": "Desafios"
+  },
+  {
+    "id": 24,
+    "pregunta": "Elegí una temporada del año y describe cómo es tu día perfecto en esa temporada",
+    "categoria": "Elecciones"
+  },
+  {
+    "id": 25,
+    "pregunta": "Si pudieras hacer retroceder el tiempo y cambiar algo de tu pasado, ¿qué cambiarías?",
+    "categoria": "Para pensar"
+  },
+  {
+    "id": 26,
+    "pregunta": "Compartí una foto de un paisaje que te haga sentir en paz",
+    "categoria": "Para compartir"
+  },
+  {
+    "id": 27,
+    "pregunta": "Si tuvieras un día extra en la semana, ¿qué harías con ese día?",
+    "categoria": "Desafios"
+  },
+  {
+    "id": 28,
+    "pregunta": "Elegí entre vivir siempre en el pasado o en el futuro. ¿Cuál elegirías y por qué?",
+    "categoria": "Elecciones"
+  },
+  {
+    "id": 29,
+    "pregunta": "¿Qué crees que se inventará en el futuro para ahorrar tiempo?",
+    "categoria": "Para pensar"
+  },
+  {
+    "id": 30,
+    "pregunta": "Compartí una actividad que te guste hacer en compañía de amigos",
+    "categoria": "Para compartir"
+  },
+  {
+    "id": 31,
+    "pregunta": "Si pudieras tener una habilidad sobrenatural, ¿cuál elegirías?",
+    "categoria": "Desafios"
+  },
+  {
+    "id": 32,
+    "pregunta": "¿Qué te motiva a levantarte cada mañana?",
+    "categoria": "Para pensar"
+  },
+  {
+    "id": 33,
+    "pregunta": "Comparte un consejo que te hayan dado y que te haya ayudado en tu vida",
+    "categoria": "Para compartir"
+  },
+  {
+    "id": 34,
+    "pregunta": "Si pudieras ser un personaje de película por un día, ¿quién serías?",
+    "categoria": "Elecciones"
+  },
+  {
+    "id": 35,
+    "pregunta": "Si pudieras tener una cena con cualquier persona (viva o muerta), ¿quién sería y por qué?",
+    "categoria": "Para pensar"
+  },
+  {
+    "id": 36,
+    "pregunta": "Si tuvieras la oportunidad de viajar a cualquier país, ¿cuál elegirías y qué harías allí?",
+    "categoria": "Elecciones"
+  },
+  {
+    "id": 37,
+    "pregunta": "Comparte una canción que te haga sentir feliz",
+    "categoria": "Para compartir"
+  },
+  {
+    "id": 38,
+    "pregunta": "Si pudieras aprender cualquier habilidad en un instante, ¿cuál elegirías?",
+    "categoria": "Desafios"
+  },
+  {
+    "id": 39,
+    "pregunta": "¿Cuál es tu cita o refrán favorito?",
+    "categoria": "Para pensar"
+  },
+  {
+    "id": 40,
+    "pregunta": "Comparte una receta de tu comida favorita",
+    "categoria": "Para compartir"
+  },
+  {
+    "id": 41,
+    "pregunta": "Si pudieras tener un superpoder, ¿cuál elegirías y cómo lo usarías?",
+    "categoria": "Desafios"
+  },
+  {
+    "id": 42,
+    "pregunta": "¿Qué libro has leído recientemente y qué opinión tienes al respecto?",
+    "categoria": "Para pensar"
+  },
+  {
+    "id": 43,
+    "pregunta": "Comparte una anécdota divertida que te haya sucedido",
+    "categoria": "Para compartir"
+  },
+  {
+    "id": 44,
+    "pregunta": "Si pudieras vivir en cualquier época de la historia, ¿cuál elegirías y por qué?",
+    "categoria": "Elecciones"
+  },
+  {
+    "id": 45,
+    "pregunta": "Si tuvieras la oportunidad de hablar con tu yo más joven, ¿qué consejo le darías?",
+    "categoria": "Para pensar"
+  },
+  {
+    "id": 46,
+    "pregunta": "Comparte una película que te haya inspirado y explica por qué.",
+    "categoria": "Para compartir"
+  },
+  {
+    "id": 47,
+    "pregunta": "Si pudieras tener una conversación con un animal, ¿cuál elegirías y qué le preguntarías?",
+    "categoria": "Desafios"
+  },
+  {
+    "id": 48,
+    "pregunta": "¿Cuál es tu lugar favorito para relajarte y por qué te gusta?",
+    "categoria": "Para pensar"
+  },
+  {
+    "id": 49,
+    "pregunta": "Comparte una experiencia de viaje que te haya dejado una gran impresión.",
+    "categoria": "Para compartir"
+  },
+  {
+    "id": 50,
+    "pregunta": "Si pudieras cambiar algo en el mundo, ¿qué cambiarías y por qué?",
+    "categoria": "Elecciones"
+  },
+  {
+    "id": 51,
+    "pregunta": "Si pudieras tener una cena con cualquier persona, viva o muerta, ¿quién sería y por qué?",
+    "categoria": "Desafios"
+  },
+  {
+    "id": 52,
+    "pregunta": "¿Cuál es tu hobby o pasatiempo favorito y cómo te ayuda a relajarte?",
+    "categoria": "Para pensar"
+  },
+  {
+    "id": 53,
+    "pregunta": "Comparte un logro personal del que te sientas especialmente orgulloso/a.",
+    "categoria": "Para compartir"
+  },
+  {
+    "id": 54,
+    "pregunta": "Si pudieras aprender a hacer cualquier cosa en un instante, ¿qué elegirías y por qué?",
+    "categoria": "Elecciones"
+  },
+  {
+    "id": 55,
+    "pregunta": "¿Cuál es tu comida favorita y qué es lo que más te gusta de ella?",
+    "categoria": "Para pensar"
+  },
+  {
+    "id": 56,
+    "pregunta": "Comparte un momento en el que hayas enfrentado un miedo y cómo lo superaste.",
+    "categoria": "Para compartir"
+  },
+  {
+    "id": 57,
+    "pregunta": "Si pudieras vivir en cualquier país del mundo, ¿dónde te gustaría vivir y por qué?",
+    "categoria": "Desafios"
+  },
+  {
+    "id": 58,
+    "pregunta": "¿Qué te motiva a levantarte cada mañana y enfrentar el día?",
+    "categoria": "Para pensar"
+  },
+  {
+    "id": 59,
+    "pregunta": "Comparte una canción que te haga sentir emociones fuertes y explica por qué.",
+    "categoria": "Para compartir"
+  },
+  {
+    "id": 60,
+    "pregunta": "Si pudieras tener un talento extraordinario, ¿cuál elegirías y cómo lo aprovecharías?",
+    "categoria": "Elecciones"
+  },
+  {
+    "id": 61,
+    "pregunta": "Si pudieras cambiar una cosa del mundo, ¿qué cambiarías y por qué?",
+    "categoria": "Desafios"
+  },
+  {
+    "id": 62,
+    "pregunta": "¿Cuál es tu libro favorito y por qué te gusta tanto?",
+    "categoria": "Para pensar"
+  },
+  {
+    "id": 63,
+    "pregunta": "Comparte un momento divertido o gracioso que hayas vivido recientemente.",
+    "categoria": "Para compartir"
+  },
+  {
+    "id": 64,
+    "pregunta": "Si pudieras tener una superpoder, ¿cuál sería y cómo lo utilizarías?",
+    "categoria": "Elecciones"
+  },
+  {
+    "id": 65,
+    "pregunta": "¿Cuál es tu película favorita y qué es lo que más te gusta de ella?",
+    "categoria": "Para pensar"
+  },
+  {
+    "id": 66,
+    "pregunta": "Comparte un consejo o lección de vida que consideres importante.",
+    "categoria": "Para compartir"
+  },
+  {
+    "id": 67,
+    "pregunta": "Si pudieras retroceder en el tiempo y cambiar algo, ¿qué cambiarías y por qué?",
+    "categoria": "Desafios"
+  },
+  {
+    "id": 68,
+    "pregunta": "¿Cuál es tu destino de viaje soñado y qué lugares te gustaría visitar allí?",
+    "categoria": "Elecciones"
+  },
+  {
+    "id": 69,
+    "pregunta": "Comparte una experiencia en la que hayas ayudado a alguien y cómo te hizo sentir.",
+    "categoria": "Para compartir"
+  },
+  {
+    "id": 70,
+    "pregunta": "Si pudieras vivir en cualquier época de la historia, ¿cuál elegirías y por qué?",
+    "categoria": "Desafios"
+  },
+  {
+    "id": 71,
+    "pregunta": "Si pudieras ser famoso/a por algo, ¿qué te gustaría que fuera?",
+    "categoria": "Elecciones"
+  },
+  {
+    "id": 72,
+    "pregunta": "¿Cuál es tu deporte o actividad física favorita y por qué te gusta?",
+    "categoria": "Para pensar"
+  },
+  {
+    "id": 73,
+    "pregunta": "Comparte una meta o sueño que hayas logrado cumplir y cómo te sentiste al alcanzarlo.",
+    "categoria": "Para compartir"
+  },
+  {
+    "id": 74,
+    "pregunta": "Si pudieras tener una conversación con cualquier persona, viva o fallecida, ¿quién sería y qué le preguntarías?",
+    "categoria": "Desafios"
+  },
+  {
+    "id": 75,
+    "pregunta": "¿Cuál es tu comida o plato favorito y por qué te gusta tanto?",
+    "categoria": "Para pensar"
+  },
+  {
+    "id": 76,
+    "pregunta": "Comparte un momento en el que te hayas sentido inspirado/a y qué te motivó.",
+    "categoria": "Para compartir"
+  },
+  {
+    "id": 77,
+    "pregunta": "Si pudieras viajar al futuro, ¿qué te gustaría ver o saber?",
+    "categoria": "Elecciones"
+  },
+  {
+    "id": 78,
+    "pregunta": "¿Cuál es tu canción favorita y por qué te gusta tanto?",
+    "categoria": "Para pensar"
+  },
+  {
+    "id": 79,
+    "pregunta": "Comparte un momento en el que hayas enfrentado un miedo y cómo te sentiste al superarlo.",
+    "categoria": "Desafios"
+  },
+  {
+    "id": 80,
+    "pregunta": "Si pudieras tener una habilidad o talento que no tienes actualmente, ¿cuál te gustaría tener y por qué?",
+    "categoria": "Elecciones"
+  },
+  {
+    "id": 81,
+    "pregunta": "Si pudieras visitar cualquier lugar del mundo, ¿cuál elegirías y por qué?",
+    "categoria": "Elecciones"
+  },
+  {
+    "id": 82,
+    "pregunta": "¿Cuál es tu libro favorito y qué te gusta tanto de él?",
+    "categoria": "Para pensar"
+  },
+  {
+    "id": 83,
+    "pregunta": "Comparte una experiencia en la que hayas aprendido algo valioso y cómo te ha afectado.",
+    "categoria": "Para compartir"
+  },
+  {
+    "id": 84,
+    "pregunta": "Si pudieras tener un superpoder, ¿cuál elegirías y cómo lo usarías?",
+    "categoria": "Elecciones"
+  },
+  {
+    "id": 85,
+    "pregunta": "¿Cuál es tu película favorita y por qué te gusta tanto?",
+    "categoria": "Para pensar"
+  },
+  {
+    "id": 86,
+    "pregunta": "Comparte un consejo o lección de vida que te hayan dado y que te haya impactado positivamente.",
+    "categoria": "Para compartir"
+  },
+  {
+    "id": 87,
+    "pregunta": "Si pudieras tener una conversación con tu yo más joven, ¿qué consejo te darías a ti mismo/a?",
+    "categoria": "Desafios"
+  },
+  {
+    "id": 88,
+    "pregunta": "¿Cuál es tu pasatiempo favorito y por qué te gusta tanto?",
+    "categoria": "Para pensar"
+  },
+  {
+    "id": 89,
+    "pregunta": "Comparte un logro personal del que te sientas especialmente orgulloso/a y por qué es importante para ti.",
+    "categoria": "Para compartir"
+  },
+  {
+    "id": 90,
+    "pregunta": "Si pudieras vivir en cualquier época de la historia, ¿cuál elegirías y por qué?",
+    "categoria": "Elecciones"
+  },
+  {
+    "id": 91,
+    "pregunta": "¿Cuál es tu comida favorita y por qué te gusta tanto?",
+    "categoria": "Para pensar"
+  },
+  {
+    "id": 92,
+    "pregunta": "Comparte un momento de tu infancia que recuerdes con cariño y por qué es especial para ti.",
+    "categoria": "Para compartir"
+  },
+  {
+    "id": 93,
+    "pregunta": "Si pudieras aprender cualquier habilidad nueva en un instante, ¿cuál elegirías y por qué?",
+    "categoria": "Elecciones"
+  },
+  {
+    "id": 94,
+    "pregunta": "¿Cuál es tu canción favorita y qué significado tiene para ti?",
+    "categoria": "Para pensar"
+  },
+  {
+    "id": 95,
+    "pregunta": "Comparte una meta o sueño que tengas y qué estás haciendo para alcanzarlo.",
+    "categoria": "Desafios"
+  },
+  {
+    "id": 96,
+    "pregunta": "Si pudieras tener una cena con cualquier persona famosa, viva o fallecida, ¿quién elegirías y por qué?",
+    "categoria": "Elecciones"
+  },
+  {
+    "id": 97,
+    "pregunta": "¿Cuál es tu deporte favorito y por qué te gusta tanto?",
+    "categoria": "Para pensar"
+  },
+  {
+    "id": 98,
+    "pregunta": "Comparte una lección que hayas aprendido a través de un fracaso y cómo te ha ayudado a crecer.",
+    "categoria": "Para compartir"
+  },
+  {
+    "id": 99,
+    "pregunta": "Si pudieras vivir en cualquier país, ¿cuál elegirías y por qué?",
+    "categoria": "Elecciones"
+  },
+  {
+    "id": 100,
+    "pregunta": "¿Cuál es tu cita o frase inspiradora favorita y cómo te motiva en tu vida?",
+    "categoria": "Para pensar"
+  }
+]

@@ -4,20 +4,24 @@ import styles from './styles.module.css'
 import preguntas from './cards.json'
 import CardsBackground from './background';
 
-const to = (i) => ({
-  x: 0,
-  y: 0,//i * -4,
-  scale: 1,
-  rot: 0,//-10 + Math.random() * 20,
-  delay: i * 100,
-});
-
-const from = (_i) => ({ x: 0, rot: 0, scale: 1.5, y: -1000 });
-
-const trans = (r, s) =>
-  `perspective(none) rotateX(-20deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`;
-
 function Deck(props: any) {
+
+  const [cardsFall, setCardsFall] = useState(-1000);
+  const [cardsScale, setCardsScale] = useState(1.5);
+  const [cardsDelay, setCardsDelay] = useState(100);
+
+  const to = (i) => ({
+    x: 0,
+    y: 0,//i * -4,
+    scale: 1,
+    rot: 0,//-10 + Math.random() * 20,
+    delay: i * cardsDelay,
+  });
+
+  const from = (_i) => ({ x: 0, rot: 0, scale: cardsScale, y: cardsFall });
+
+  const trans = (r, s) =>
+    `perspective(none) rotateX(-20deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`;
 
   const [actualCards, setActualCards] = useState<any>([]);
 
@@ -49,15 +53,28 @@ function Deck(props: any) {
 
   useEffect(() => {
     if (!props.tutorial) {
-      setActualCards(
+      setCardsFall(-1000);
+      setCardsScale(1);
+      setCardsDelay(5);
+      const auxCards: any = [];
+      for (var i = 0; i < 100; i++) {
+        auxCards.push(preguntas[Math.floor(Math.random() * 100)]);
+      }
+      console.log(auxCards);
+      setActualCards(auxCards);
+      /*setActualCards(
         [
           preguntas[Math.floor(Math.random() * 100)],
           preguntas[Math.floor(Math.random() * 100)],
           preguntas[Math.floor(Math.random() * 100)]
         ]
-      )
+      )*/
     }
   }, [props.tutorial])
+
+  useEffect(() => {
+    console.log(actualCards)
+  }, [actualCards])
 
   const [gone] = useState(() => new Set());
   const [propsCards, api] = useSprings(actualCards.length, (i) => ({
@@ -93,7 +110,7 @@ function Deck(props: any) {
       };
     });
 
-    if (!props.tutorial) {
+    /*if (!props.tutorial) {
       setActualCards(
         [
           preguntas[Math.floor(Math.random() * 100)],
@@ -101,7 +118,7 @@ function Deck(props: any) {
           actualCards[1]
         ]
       )
-    }
+    }*/
 
     if (gone.size === actualCards.length) {
       setTimeout(() => {
@@ -114,10 +131,20 @@ function Deck(props: any) {
   return (
     <>
       <CardsBackground />
+      <div className={`${styles.deck} mt-2`}>
+          <div className="text-center rounded-[17px] p-[2px]" style={{boxShadow: '0 1px 1px 2px rgba(50, 50, 73, 0.15), 0 10px 10px -10px rgba(50, 50, 73, 0.3)'}}>
+            <p className="bg-[#0054BA] text-white rounded-t-[15px] font-regular text-[12px] py-1 uppercase">
+              Categoria
+            </p>
+            <p className="text-[16px] text-[#0054BA] justify-center items-center font-bold pluto-black mx-auto w-11/12 h-[85%] flex uppercase">
+              Pregunta
+            </p>
+          </div>
+        </div>
       {!props.tutorial && propsCards.map(({ x, y, rot, scale }, i) => (
         <animated.div className={styles.deck} key={i} style={{ x, y }}>
-          <animated.div style={{ transform: interpolate([rot, scale], trans) }} className="text-center rounded-md p-[2px]">
-            <p key={actualCards[i].id} className="bg-[#0054BA] text-white rounded-t-md font-regular text-[12px] py-1 uppercase">
+          <animated.div style={{ transform: interpolate([rot, scale], trans) }} className="text-center rounded-[17px] p-[2px]">
+            <p key={actualCards[i].id} className="bg-[#0054BA] text-white rounded-t-[15px] font-regular text-[12px] py-1 uppercase">
               {actualCards[i].categoria}
             </p>
             <p className="text-[16px] text-[#0054BA] justify-center items-center font-bold pluto-black mx-auto w-11/12 h-[85%] flex uppercase">
@@ -128,7 +155,7 @@ function Deck(props: any) {
       ))}
       {props.tutorial && propsCards.map(({ x, y, rot, scale }, i) => (
         <animated.div className={styles.deck} key={i} style={{ x, y }}>
-          <animated.div style={{ transform: interpolate([rot, scale], trans) }} className="flex justify-center items-center flex-col rounded-md p-[2px]">
+          <animated.div style={{ transform: interpolate([rot, scale], trans) }} className="flex justify-center items-center flex-col rounded-[17px] p-[2px]">
             <p className="text-[20px] text-[#0054BA] pluto-black justify-center items-center font-bold pluto-black w-5/6 mx-auto text-center">
               {actualCards[i].titulo}
             </p>

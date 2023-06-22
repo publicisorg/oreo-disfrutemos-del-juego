@@ -21,8 +21,10 @@ function UI(props: any) {
     }
 
     function handleNextTutorial() {
-        props.setTutorialStage(props.tutorialStage + 1);
-        props.changeCards(!props.value);
+        if (props.tutorial) {
+            props.setTutorialStage(props.tutorialStage + 1);
+            props.changeCards(!props.value);
+        }
     }
 
     //props.setTutorialStage(props.tutorialStage + 1);

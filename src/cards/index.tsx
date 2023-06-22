@@ -150,7 +150,7 @@ function Deck(props: any) {
       ))}
       {props.tutorial && propsCards.map(({ x, y, rot, scale }, i) => (
         <animated.div className={styles.deck} key={i} style={{ x, y }}>
-          <animated.div style={{ transform: interpolate([rot, scale], trans) }} className="flex justify-center items-center flex-col rounded-[17px] p-[2px]">
+          <animated.div style={{ transform: interpolate([rot, scale], trans), boxShadow: '1px 1px 3px #00000088' }} className="flex justify-center items-center flex-col rounded-[17px] p-[2px]">
             <p className="text-[20px] text-[#0054BA] pluto-black justify-center items-center font-bold pluto-black w-5/6 mx-auto text-center">
               {actualCards[i].titulo}
             </p>

@@ -63,7 +63,6 @@ function UI(props: any) {
         if (props.diceResult != 0 && props.diceStop) {
             setShowMessage("opacity-100 scale-100");
             setButtonOpacity("opacity-100 scale-100");
-            console.log("ESTO?");
         } else {
             setShowMessage("opacity-0 scale-0");
         }

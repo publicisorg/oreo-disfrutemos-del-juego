@@ -60,7 +60,6 @@ function Deck(props: any) {
       for (var i = 0; i < 100; i++) {
         auxCards.push(preguntas[Math.floor(Math.random() * 100)]);
       }
-      console.log(auxCards);
       setActualCards(auxCards);
       /*setActualCards(
         [
@@ -71,10 +70,6 @@ function Deck(props: any) {
       )*/
     }
   }, [props.tutorial])
-
-  useEffect(() => {
-    console.log(actualCards)
-  }, [actualCards])
 
   const [gone] = useState(() => new Set());
   const [propsCards, api] = useSprings(actualCards.length, (i) => ({
@@ -134,16 +129,16 @@ function Deck(props: any) {
       <div className={`${styles.deck} mt-2`}>
           <div className="text-center rounded-[17px] p-[2px]" style={{boxShadow: '0 1px 1px 2px rgba(50, 50, 73, 0.15), 0 10px 10px -10px rgba(50, 50, 73, 0.3)'}}>
             <p className="bg-[#0054BA] text-white rounded-t-[15px] font-regular text-[12px] py-1 uppercase">
-              Categoria
+              
             </p>
             <p className="text-[16px] text-[#0054BA] justify-center items-center font-bold pluto-black mx-auto w-11/12 h-[85%] flex uppercase">
-              Pregunta
+              
             </p>
           </div>
         </div>
       {!props.tutorial && propsCards.map(({ x, y, rot, scale }, i) => (
         <animated.div className={styles.deck} key={i} style={{ x, y }}>
-          <animated.div style={{ transform: interpolate([rot, scale], trans) }} className="text-center rounded-[17px] p-[2px]">
+          <animated.div style={{ transform: interpolate([rot, scale], trans) }} className="text-center rounded-[16px] p-[1px]">
             <p key={actualCards[i].id} className="bg-[#0054BA] text-white rounded-t-[15px] font-regular text-[12px] py-1 uppercase">
               {actualCards[i].categoria}
             </p>

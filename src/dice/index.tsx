@@ -34,7 +34,7 @@ function Dice(props: any) {
 
     useEffect(() => {
         if (diceBoxReady) {
-            if ((props.tutorialStage == 2 && props.tutorial == true) || props.tutorial == false) {
+            if (!props.tutorial) {
                 diceBox.roll('1d6');
                 props.setDiceStop(false);
                 diceBox.onDieComplete = (results) => {

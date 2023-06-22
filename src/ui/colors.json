@@ -6,32 +6,32 @@
     },
     {
         "id": 1,
-        "color": "#dc2626",
+        "color": "#ED3A45",
         "text": "Puede pasar la pregunta"
     },
     {
         "id": 2,
-        "color": "#60a5fa",
+        "color": "#2BCEF2",
         "text": "Elige un participante para que adivine su respuesta"
     },
     {
         "id": 3,
-        "color": "#8b5cf6",
-        "text": "Tiene otro turno."
+        "color": "#C959F0",
+        "text": "Contesta dos preguntas"
     },
     {
         "id": 4,
-        "color": "#1e40af",
-        "text": "Puede elegir quien contesta"
+        "color": "#1219B8",
+        "text": "Podes elegir quien contesta"
     },
     {
         "id": 5,
-        "color": "#d97706",
-        "text": "Dice la respuesta y el resto tiene que adivinar la pregunta."
+        "color": "#F9C133",
+        "text": "Podes cambiar por otro color"
     },
     {
         "id": 6,
-        "color": "#16a34a",
-        "text": "Contestan todos."
+        "color": "#4FBB4D",
+        "text": "Contestan todos"
     }
 ]

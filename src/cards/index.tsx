@@ -12,7 +12,7 @@ function Deck(props: any) {
 
   const to = (i) => ({
     x: 0,
-    y: 0,//i * -4,
+    y: -2 + Math.random() * 4,//0,//i * -4,
     scale: 1,
     rot: -5 + Math.random() * 10,
     delay: i * cardsDelay,
@@ -138,7 +138,7 @@ function Deck(props: any) {
         </div>}
       {!props.tutorial && propsCards.map(({ x, y, rot, scale }, i) => (
         <animated.div className={styles.deck} key={i} style={{ x, y }}>
-          <animated.div style={{ transform: interpolate([rot, scale], trans), boxShadow: '1px 1px 3px #00000015' }} className="text-center rounded-[16px] p-[1px]">
+          <animated.div style={{ transform: interpolate([rot, scale], trans), boxShadow: '1px 1px 3px #00000030' }} className="text-center rounded-[16px] p-[1px]">
             <p key={actualCards[i].id} className="bg-[#0054BA] text-white rounded-t-[15px] font-regular text-[12px] py-1 uppercase" >
               {actualCards[i].categoria}
             </p>

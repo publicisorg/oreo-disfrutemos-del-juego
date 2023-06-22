@@ -2,7 +2,7 @@
 export const Footer = (props:any) => {
   return (
     <footer className='text-center text-white flex flex-col py-2 w-[90%] gap-2 mb-4'>
-      <a href="#" className={`flex flex-row justify-center items-center gap-2 text-[12px] duration-300 ${props.opacity}`}>
+      <a href="#" className={`md:hidden flex flex-row justify-center items-center gap-2 text-[12px] duration-300 ${props.opacity}`}>
         <span>
           <img className="w-4" src="icon-share.svg" />
         </span>

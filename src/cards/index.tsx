@@ -98,8 +98,7 @@ function Deck(props: any) {
         [
           preguntas[Math.floor(Math.random() * 100)],
           actualCards[0],
-          actualCards[1],
-          actualCards[2]
+          actualCards[1]
         ]
       )
     }

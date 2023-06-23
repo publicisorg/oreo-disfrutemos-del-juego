@@ -18,7 +18,7 @@ function App() {
   }
 
   useEffect(() => {
-    if (countCards == 5) {
+    if (countCards == 3) {
       setShowPopup(true);
     }
   }, [countCards])

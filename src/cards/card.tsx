@@ -38,15 +38,15 @@ export const CardsNew = (props: any) => {
     const selectCard = cardsTutorial[tutorialStage];
     setActualCard(selectCard);
     setAnimatedCard(selectCard);
-    setAnimations4("top-0 scale-100");
+    setAnimations4("top-0 bottom-0 scale-100");
     setTimeout(() => {
-      setAnimations3("top-0 scale-100");
+      setAnimations3("top-0 bottom-0 scale-100");
     }, 100);
     setTimeout(() => {
-      setAnimations2("top-0 scale-100 shadow-[0px_0px_3px_2px_#00000015]");
+      setAnimations2("top-0 bottom-0 scale-100 shadow-[0px_0px_3px_2px_#00000015]");
     }, 200);
     setTimeout(() => {
-      setAnimations("top-0 scale-100 shadow-[0px_0px_3px_2px_#00000015]");
+      setAnimations("top-0 bottom-0 scale-100 shadow-[0px_0px_3px_2px_#00000015]");
     }, 300);
     setTimeout(() => {
       setEnableControls(true);
@@ -77,18 +77,18 @@ export const CardsNew = (props: any) => {
       }
       setActualCard(selectCard);
       setTimeout(() => {
-        setAnimations("rotate-6 right-[100px] scale-110 shadow-[0px_0px_3px_2px_#00000030]");
-        setAnimations2("shadow-[0px_0px_3px_2px_#00000030]");
+        setAnimations("rotate-6 right-[100px] bottom-0 top-0 scale-110 shadow-[0px_0px_3px_2px_#00000030]");
+        setAnimations2("bottom-0 top-0 left-0 right-0 shadow-[0px_0px_3px_2px_#00000030]");
       }, 50);
       setTimeout(() => {
         setDuration('duration-1000');
-        setAnimations("rotate-[45deg] -right-[1000px]");
+        setAnimations("rotate-[45deg] -right-[1000px] bottom-0 top-0");
       }, 300);
       setTimeout(() => {
         setAnimatedCard(selectCard);
         setDuration('duration-0');
-        setAnimations("left-0 right-0 rotate-0 scale-100 shadow-[0px_0px_3px_2px_#00000015]");
-        setAnimations2("shadow-[0px_0px_3px_2px_#00000015]");
+        setAnimations("left-0 right-0 bottom-0 top-0 rotate-0 scale-100 shadow-[0px_0px_3px_2px_#00000015]");
+        setAnimations2("bottom-0 top-0 shadow-[0px_0px_3px_2px_#00000015]");
         setEnableControls(true);
       }, 2000);
     }
@@ -107,18 +107,18 @@ export const CardsNew = (props: any) => {
 export const SingleCard = (props: any) => {
   return (
     <>
-      {!props.tutorial && <div className={`${props.className} ${props.duration} ${props.animations} w-[290px] h-[160px] absolute bg-white rounded-[17px] border overflow-hidden`}>
-        <div className="aboslute top-0 bg-[#0054BB] w-full h-[25px] flex justify-center items-center text-[10px] uppercase">
+      {!props.tutorial && <div className={`${props.className} ${props.duration} ${props.animations} w-[290px] md:w-[325px] h-[160px] md:h-[200px] absolute bg-white rounded-[17px] border overflow-hidden`}>
+        <div className="aboslute top-0 bg-[#0054BB] w-full h-[30px] flex justify-center items-center text-[10px] uppercase md:text-xs">
           {props.categoria}
         </div>
-        <div className="text-[#0054BB] pluto-black flex w-full px-2 h-[80%] justify-center items-center text-center uppercase text-[15px]">
+        <div className="text-[#0054BB] pluto-black flex w-full px-2 h-[80%] justify-center items-center text-center uppercase text-[15px] md:text-base">
           {props.pregunta}
         </div>
       </div>}
-      {props.tutorial && <div className={`${props.className} ${props.duration} ${props.animations} w-[290px] h-[160px] absolute bg-white rounded-[17px] border overflow-hidden`}>
+      {props.tutorial && <div className={`${props.className} ${props.duration} ${props.animations} w-[290px] md:w-[325px] h-[160px] md:h-[200px] absolute bg-white rounded-[17px] border overflow-hidden`}>
         <div className="text-[#0054BB] pluto-black flex w-full px-2 h-full flex-col justify-center items-center text-center text-[15px]">
-          <p className="pluto-black uppercase">{props.pregunta}</p>
-          <p className="text-xs">{props.categoria}</p>
+          <p className="pluto-black uppercase text-base md:text-xl">{props.pregunta}</p>
+          <p className="text-xs md:text-sm">{props.categoria}</p>
           <div className="flex flex-row justify-center items-center gap-1 absolute bottom-2">
             <div className={`rounded-full aspect-square h-3 ${props.index == 1 ? "border-[#0054BA] bg-[#0054BA]" : "border-[#D9D9D9] bg-transparent"} border-2`} />
             <div className={`rounded-full aspect-square h-3 ${props.index == 2 ? "border-[#0054BA] bg-[#0054BA]" : "border-[#D9D9D9] bg-transparent"} border-2`} />

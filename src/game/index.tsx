@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import UI from '../ui';
 import Cards from '../cards';
 import Dice from '../dice';
+import { CardsNew } from '../cards/card';
 
 function Game(props:any) {
 
@@ -51,7 +52,8 @@ function Game(props:any) {
       </div>
       <div className="z-10 absolute left-0 top-0 w-full h-full flex flex-col justify-center items-center">
         <div className="h-1/3 w-full">
-          <Cards countCards={props.countCards} changeCard={changeCard} tutorial={tutorial} setCardsCount={props.setCardsCount}/>
+          {false && <Cards countCards={props.countCards} changeCard={changeCard} tutorial={tutorial} setCardsCount={props.setCardsCount}/>}
+          <CardsNew countCards={props.countCards} changeCard={changeCard} tutorial={tutorial} setCardsCount={props.setCardsCount}/>
         </div>
         <div className={`w-full h-2/3 relative box-border duration-300`}>
           {true && <Dice setDiceStop={setDiceStop} setDiceResult={setDiceResult} tutorial={tutorial} tutorialStage={tutorialStage} refreshDice={refreshDice} />}

@@ -74,14 +74,14 @@ function UI(props: any) {
         <>
             <div className="h-1/3 w-full top-0 absolute" onClick={() => handleNextTutorial()} />
             <div className="h-2/3 w-full bottom-0 absolute" onClick={() => handleFlyOut()} />
-            <div className={`${showMessage} absolute bottom-24 w-full flex justify-center items-center duration-300`}>
-                <div className={`max-w-[300px] text-white text-xs uppercase duration-300 py-4 px-8 rounded-full w-4/5 text-center shadow-[4px_4px_0px_0px_rgba(0,0,0,0.25)]`} style={{ backgroundColor: diceResultColor }}>
+            <div className={`${showMessage} absolute bottom-16 w-full flex justify-center items-center duration-300`}>
+                <div className={`max-w-[300px] text-white text-xs uppercase duration-300 py-4 px-8 rounded-full w-[260px] text-center`} style={{ backgroundColor: diceResultColor }}>
                     {colors[props.diceResult].text}
                 </div>
             </div>
 
-            <div className={`${buttonOpacity} w-full bottom-0 h-24 text-white absolute flex justify-center items-center duration-300`}>
-                <button className="bg-[#F2F1F1] text-[#0054BA] text-xl py-3 px-6 rounded absolute z-50 bottom-4 -rotate-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.25)] pluto-black" onClick={() => handleFlyOut()}>
+            <div className={`${buttonOpacity} w-full bottom-0 h-12 text-white absolute flex justify-center items-center duration-300`}>
+                <button className="bg-[#F2F1F1] text-[#0054BA] text-lg py-3 px-3 rounded absolute z-50 bottom-4 -rotate-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.25)] pluto-black" onClick={() => handleFlyOut()}>
                     <span className={`duration-300 pluto-black ${opacity}`}>{buttonLabel}</span>
                 </button>
             </div>

@@ -1,14 +1,14 @@
 
 export const Footer = (props:any) => {
   return (
-    <footer className='text-center text-white flex flex-col py-2 w-[90%] gap-2 mb-4'>
+    <footer className='text-center text-white flex flex-col w-[90%] gap-2 mb-4'>
       <a href="#" className={`md:hidden flex flex-row justify-center items-center gap-2 text-[12px] duration-300 ${props.opacity}`}>
         <span>
           <img className="w-4" src="icon-share.svg" />
         </span>
         compartir
       </a>
-      <small className="text-[10px]">Copyright © Mondelez International 2023. All Rights reserved.</small>
+      <small className="text-[9px]">Copyright © Mondelez International 2023. All Rights reserved.</small>
     </footer>
   )
 }
@@ -37,7 +37,7 @@ export const FooterStart = (props:any) => {
           </p>
         </a>
       </div>
-      <small className="text-[10px]">Copyright © Mondelez International 2023. All Rights reserved.</small>
+      <small className="text-[8px]">Copyright © Mondelez International 2023. All Rights reserved.</small>
     </footer>
   )
 }

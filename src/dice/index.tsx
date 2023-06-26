@@ -14,9 +14,10 @@ function Dice(props: any) {
             theme: "default",
             themeColor: '#FEFEFE',
             offscreen: true,
-            scale: 11,
+            scale: 6,
             lightIntensity: 1,
-            shadowTransparency: 0.9
+            shadowTransparency: 0.9,
+            throwForce: 2
         }))
     }, [])
 

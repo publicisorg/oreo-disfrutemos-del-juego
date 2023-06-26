@@ -35,7 +35,7 @@ function Game(props:any) {
   }, [changeCard])
 
   return (
-    <div className="relative mx-auto w-full h-full overflow-x-hidden">
+    <div className="relative mx-auto w-full h-full overflow-x-hidden lg:w-[600px]">
       <div className='z-50 w-full h-full relative inset-0'>
         <UI
           changeCards={toggleCards}

@@ -85,13 +85,13 @@ function DatosPersonales(props: any) {
                         </div>
                         <div className="absolute -bottom-6 mx-auto w-full flex justify-center items-center">
                             <button onClick={handleClose} className="bg-[#F2F1F1] text-[#0054BA] text-xl py-3 px-6 rounded z-50 bottom-4 -rotate-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.25)] pluto-black">
-                                <span className={`duration-300 pluto-black`}>CONTINUAR</span>
+                                <span className={`duration-300 pluto-black tracking-tighter`}>CONTINUAR</span>
                             </button>
                         </div>
                     </div>}
                     {!showThanks && <form className={`${formOpacity} duration-300`} onSubmit={(e) => handleSubmit(e)}>
                         <div className="py-20 flex justify-center items-center flex-col gap-4">
-                            <p className="w-2/3 text-xl text-center">¡Participa del sorteo <br />
+                            <p className="w-3/4 text-xl text-center">¡Participa del sorteo <br />
                                 y gana el juego Oreo, <br />
                                 en versión física!</p>
                             <p className="text-sm">
@@ -115,7 +115,7 @@ function DatosPersonales(props: any) {
                         </div>
                         <div className="absolute -bottom-6 mx-auto w-full flex justify-center items-center">
                             <button type="submit" value="Submit" className="bg-[#F2F1F1] text-[#0054BA] text-xl py-3 px-6 rounded z-50 bottom-4 -rotate-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.25)] pluto-black">
-                                <span className={`duration-300 pluto-black`}>CONTINUAR</span>
+                                <span className={`duration-300 pluto-black tracking-tighter`}>CONTINUAR</span>
                             </button>
                         </div>
                         <p className="underline text-xs text-white absolute -bottom-16 w-full text-center" onClick={handleClose}>Continuar sin suscribirme</p>

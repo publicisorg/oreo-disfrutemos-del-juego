@@ -80,9 +80,9 @@ function UI(props: any) {
                 </div>
             </div>
 
-            <div className={`${buttonOpacity} w-full bottom-0 h-12 text-white absolute flex justify-center items-center duration-300`}>
-                <button className="bg-[#F2F1F1] text-[#0054BA] text-lg py-3 px-3 rounded absolute z-50 bottom-4 -rotate-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.25)] pluto-black" onClick={() => handleFlyOut()}>
-                    <span className={`duration-300 pluto-black ${opacity}`}>{buttonLabel}</span>
+            <div className={`${buttonOpacity} w-full bottom-0 text-white absolute flex justify-center items-center duration-300`}>
+                <button className="bg-[#F2F1F1] text-[#0054BA] h-[50px] min-w-[150px] text-lg px-3 rounded-md absolute z-50 bottom-4 -rotate-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.25)] pluto-black" onClick={() => handleFlyOut()}>
+                    <span className={`duration-300 pluto-black tracking-tighter ${opacity}`}>{buttonLabel}</span>
                 </button>
             </div>
         </>

@@ -5,7 +5,7 @@ function Background() {
     return (
         <div className="h-full w-full -z-50 absolute bg-[#0054BB] overflow-hidden">
             <div className="relative w-full h-full">
-                <svg className="absolute -top-[250px] md:-top-[520px] -left-[200px] lg:-left-[720px]  md:-left-[500px] w-[500px]  md:w-[900px] xl:w-[1100px]   fill-white/10" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 721 720">
+                <svg className="absolute -top-[250px] md:-top-[520px] -left-[200px] lg:-left-[420px]  md:-left-[500px] w-[500px]  md:w-[900px] xl:w-[1000px]   fill-white/10" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 721 720">
                     <g>
                         <path d="M353.2,203.1h-39.6c-3.7,0-6.7,3-6.7,6.7v1.3c0,3.7,3,6.7,6.7,6.7h39.6v11.7h-61.1c-3.7,0-6.7,3-6.7,6.7v1.3
 		c0,3.7,3,6.7,6.7,6.7h61v17.2c-41.8,1.1-80.9,11.1-110.7,28.6c-33.1,19.3-51.2,45.4-51.2,73.4c0,28.1,18.1,54.1,51.1,73.4
@@ -460,7 +460,7 @@ function Background() {
 		C299.1,162.6,302.1,161.8,304,159.7z"/>
                     </g>
                 </svg>
-                <svg className="absolute -bottom-[200px] -right-[200px] w-[500px] sm:w-[1000px] md:-bottom-[100px]  md:w-[1000px]  lg:-bottom-[500px]  lg:-right-[700px] lg:w-[300px] xl:w-[1100px]  -rotate-[25deg] fill-white/10" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 721 720">
+                <svg className="absolute -bottom-[200px] -right-[200px] w-[500px] md:-bottom-[400px] md:-right-[400px] md:w-[800px] lg:-bottom-[400px] lg:-right-[400px] xl:w-[1100px] xl:-right-[600px] xl:-bottom-[500px] -rotate-[25deg] fill-white/10" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 721 720">
                     <g>
                         <path d="M353.2,203.1h-39.6c-3.7,0-6.7,3-6.7,6.7v1.3c0,3.7,3,6.7,6.7,6.7h39.6v11.7h-61.1c-3.7,0-6.7,3-6.7,6.7v1.3
 		c0,3.7,3,6.7,6.7,6.7h61v17.2c-41.8,1.1-80.9,11.1-110.7,28.6c-33.1,19.3-51.2,45.4-51.2,73.4c0,28.1,18.1,54.1,51.1,73.4

@@ -14,7 +14,7 @@ function Dice(props: any) {
             theme: "default",
             themeColor: '#FEFEFE',
             offscreen: true,
-            scale: 9,
+            scale: 8,
             lightIntensity: 1,
             shadowTransparency: 0.9,
             throwForce: 2
@@ -43,7 +43,7 @@ function Dice(props: any) {
     }, [props.refreshDice])
 
     return (
-        <div id="dice-box" className={`w-full h-3/5 relative box-border duration-300`} />
+        <div id="dice-box" className={`w-full h-3/5 lg:h-4/5 relative box-border duration-300`} />
     )
 }
 

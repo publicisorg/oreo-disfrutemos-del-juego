@@ -9,10 +9,18 @@ function UI(props: any) {
     const [showMessage, setShowMessage] = useState("opacity-0 scale-0");
     const [buttonLabel, setButtonLabel] = useState("EMPEZAR");
 
+    useEffect(() => {
+        setButtonOpacity('opacity-100 scale-100');
+    }, [])
+
     function handleFlyOut() {
         if (props.diceStop) {
             if (!props.tutorial) {
                 props.changeCards(!props.value);
+            } else {
+                props.setTutorial(false);
+                props.changeCards(!props.value);
+                setButtonLabel("SIGUIENTE PREGUNTA");
             }
             setButtonOpacity("opacity-0 scale-0");
             setShowMessage("opacity-0 scale-0");
@@ -22,19 +30,15 @@ function UI(props: any) {
 
     function handleNextTutorial() {
         if (props.tutorial) {
-            props.setTutorialStage(props.tutorialStage + 1);
             props.changeCards(!props.value);
         }
     }
-
-    //props.setTutorialStage(props.tutorialStage + 1);
 
     function handleNext() {
         if (props.tutorial) {
             setOpacity('opacity-0');
             setTimeout(() => {
                 setButtonLabel("SIGUIENTE PREGUNTA");
-                props.setTutorialStage(4);
                 setOpacity('opacity-100');
             }, 300);
         } else {
@@ -47,18 +51,6 @@ function UI(props: any) {
             }, 310);
         }
     }
-
-    useEffect(() => {
-        if (props.tutorial && props.tutorialStage < 4) {
-            setButtonOpacity("opacity-100 scale-100");
-        }
-        if (props.tutorialStage == 4) {
-            setButtonOpacity("opacity-0 scale-0");
-            setTimeout(() => {
-                setButtonLabel("SIGUIENTE PREGUNTA");
-            }, 310);
-        }
-    }, [props.tutorialStage])
 
     useEffect(() => {
         setDiceResultColor(colors[props.diceResult].color);

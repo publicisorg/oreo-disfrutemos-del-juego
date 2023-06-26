@@ -10,7 +10,6 @@ function Game(props:any) {
   const [changeCard, toggleCards] = useState(false);
   const [refreshDice, setRefreshDice] = useState(false);
   const [tutorial, isTutorial] = useState(true);
-  const [tutorialStage, setTutorialStage] = useState(1);
   const [diceResult, setDiceResult] = useState(0);
   const [diceStop, setDiceStop] = useState(true);
 
@@ -25,13 +24,6 @@ function Game(props:any) {
   }, [diceStop])
 
   useEffect(() => {
-    if (tutorialStage == 4) {
-      isTutorial(false);
-      setRefreshDice(!refreshDice);
-    }
-  }, [tutorialStage])
-
-  useEffect(() => {
     setRefreshDice(!refreshDice);
   }, [changeCard])
 
@@ -44,8 +36,6 @@ function Game(props:any) {
           diceResult={diceResult}
           tutorial={tutorial}
           setTutorial={isTutorial}
-          tutorialStage={tutorialStage}
-          setTutorialStage={setTutorialStage} 
           diceStop={diceStop}
           isTutorial={isTutorial}
           />
@@ -56,7 +46,7 @@ function Game(props:any) {
           <CardsNew countCards={props.countCards} changeCard={changeCard} tutorial={tutorial} setCardsCount={props.setCardsCount}/>
         </div>
         <div className={`w-full h-2/3 relative box-border duration-300`}>
-          {true && <Dice setDiceStop={setDiceStop} setDiceResult={setDiceResult} tutorial={tutorial} tutorialStage={tutorialStage} refreshDice={refreshDice} />}
+          {true && <Dice setDiceStop={setDiceStop} setDiceResult={setDiceResult} tutorial={tutorial} refreshDice={refreshDice} />}
         </div>
       </div>
     </div>

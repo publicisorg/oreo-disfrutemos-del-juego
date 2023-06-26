@@ -74,8 +74,8 @@ function UI(props: any) {
         <>
             <div className="h-1/3 w-full top-0 absolute" onClick={() => handleNextTutorial()} />
             <div className="h-2/3 w-full bottom-0 absolute" onClick={() => handleFlyOut()} />
-            <div className={`${showMessage} absolute bottom-16 w-full flex justify-center items-center duration-300`}>
-                <div className={`max-w-[300px] text-white text-[10px] uppercase duration-300 h-[45px] rounded-full w-[260px] text-center flex justify-center items-center`} style={{ backgroundColor: diceResultColor }}>
+            <div className={`${showMessage} absolute bottom-[4.5rem] w-full flex justify-center items-center duration-300`}>
+                <div className={`max-w-[300px] text-white text-[10px] uppercase duration-300 h-[45px] px-8 pt-1 rounded-full w-[260px] text-center flex justify-center items-center`} style={{ backgroundColor: diceResultColor }}>
                     {colors[props.diceResult].text}
                 </div>
             </div>

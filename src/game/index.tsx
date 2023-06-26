@@ -49,7 +49,7 @@ function Game(props:any) {
           isTutorial={isTutorial}
           />
       </div>
-      <div className="z-10 absolute left-0 top-0 w-full h-full flex flex-col justify-center items-center overflow-hidden">
+      <div className="z-10 absolute left-0 top-0 w-full h-full flex flex-col justify-center items-center">
         <div className="h-1/3 w-full">
           <Cards countCards={props.countCards} changeCard={changeCard} tutorial={tutorial} setCardsCount={props.setCardsCount}/>
         </div>

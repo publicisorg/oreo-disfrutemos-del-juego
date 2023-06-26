@@ -13,7 +13,7 @@ function Dice(props: any) {
             assetPath: "/assets/dice-box/", // required
             theme: "default",
             themeColor: '#FEFEFE',
-            offscreen: false,
+            offscreen: true,
             scale: 11,
             lightIntensity: 1,
             shadowTransparency: 0.9

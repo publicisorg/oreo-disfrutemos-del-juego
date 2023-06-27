@@ -29,6 +29,14 @@ function Game(props: any) {
   }, [changeCard])
 
   useEffect(() => {
+    if (props.disableAnimation && !tutorial) {
+      setTimeout(() => {
+        setDiceResult(Math.floor(Math.random() * (6 - 1 + 1) + 1))
+      }, 300);
+    }
+  }, [refreshDice])
+
+  useEffect(() => {
     if (tutorial) {
       setTimeout(() => {
         toggleCards(!changeCard);
@@ -56,7 +64,7 @@ function Game(props: any) {
           <CardsNew enableControls={enableControls} setEnableControls={setEnableControls} countCards={props.countCards} changeCard={changeCard} tutorial={tutorial} setCardsCount={props.setCardsCount} />
         </div>
         <div className={`w-full h-2/3 relative box-border duration-300`}>
-          {true && <Dice disableAnimation={props.disableAnimation} setDiceStop={setDiceStop} setDiceResult={setDiceResult} tutorial={tutorial} refreshDice={refreshDice} />}
+          {!props.disableAnimation && <Dice disableAnimation={props.disableAnimation} setDiceStop={setDiceStop} setDiceResult={setDiceResult} tutorial={tutorial} refreshDice={refreshDice} />}
         </div>
       </div>
     </div>

@@ -18,8 +18,7 @@ function Dice(props: any) {
             scale: 9,
             lightIntensity: 1,
             shadowTransparency: 0.9,
-            throwForce: 2,
-            suspendAnimation: props.disableAnimation
+            throwForce: 2
         }))
     }, [])
 

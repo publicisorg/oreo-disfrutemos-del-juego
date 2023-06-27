@@ -67,7 +67,7 @@ function UI(props: any) {
             </div>
 
             <div className={`${buttonOpacity} w-full bottom-0 text-white absolute flex justify-center items-center duration-300`}>
-                <button className={`${props.enableControls ? "bg-[#F2F1F1] text-[#0054BA]" : "bg-[#b6b6b6] text-[#0054BA]"} duration-300 h-[50px] min-w-[150px] text-lg px-3 rounded-md absolute z-50 bottom-4 -rotate-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.25)] pluto-black`} onClick={() => handleFlyOut()}>
+                <button className={`${props.enableControls ? "bg-[#F2F1F1] text-[#0054BA]" : "bg-[#b6b6b6] text-[#0054BA]"} duration-300 h-[60px] min-w-[170px] text-xl px-3 rounded-md absolute z-50 bottom-4 -rotate-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.25)] pluto-black`} onClick={() => handleFlyOut()}>
                     <span className={`duration-300 pluto-black tracking-tighter`}>{buttonLabel}</span>
                 </button>
             </div>

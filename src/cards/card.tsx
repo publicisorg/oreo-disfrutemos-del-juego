@@ -127,16 +127,16 @@ export const SingleCard = (props: any) => {
   return (
     <>
       {!props.tutorial && <div className={`${props.className} ${props.duration} ${props.animations} w-[290px] md:w-[325px] h-[160px] md:h-[200px] absolute bg-white rounded-[17px] border overflow-hidden`}>
-        <div className="aboslute top-0 bg-[#0054BB] w-full h-[30px] flex justify-center items-center text-[10px] uppercase md:text-xs">
+        <div className="aboslute tracking-tighter top-0 whitespace-pre bg-[#0054BB] w-full h-[30px] flex justify-center items-center text-[10px] uppercase md:text-xs">
           {props.categoria}
         </div>
-        <div className="text-[#0054BB] pluto-black flex w-full px-2 h-[80%] justify-center items-center text-center uppercase text-[15px] md:text-base">
+        <div className="text-[#0054BB] whitespace-pre pluto-black flex w-full px-2 h-[80%] justify-center items-center text-center uppercase text-[15px] md:text-base">
           {props.pregunta}
         </div>
       </div>}
       {props.tutorial && <div className={`${props.className} ${props.duration} ${props.animations} w-[290px] md:w-[325px] h-[160px] md:h-[200px] absolute bg-white rounded-[17px] border overflow-hidden`}>
         <div className="text-[#0054BB] pluto-black flex w-full px-2 h-full flex-col justify-center items-center text-center text-[15px]">
-          <p className="pluto-black uppercase text-base md:text-xl whitespace-pre">{props.pregunta}</p>
+          <p className="pluto-black uppercase text-base md:text-xl whitespace-pre tracking-tighter">{props.pregunta}</p>
           <p className="text-xs md:text-sm whitespace-pre">{props.categoria}</p>
           <div className="flex flex-row justify-center items-center gap-1 absolute bottom-2">
             <div className={`rounded-full aspect-square h-3 ${props.index == 1 ? "border-[#0054BA] bg-[#0054BA]" : "border-[#D9D9D9] bg-transparent"} border-2`} />

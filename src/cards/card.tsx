@@ -136,7 +136,7 @@ export const SingleCard = (props: any) => {
       </div>}
       {props.tutorial && <div className={`${props.className} ${props.duration} ${props.animations} w-[290px] md:w-[325px] h-[160px] md:h-[200px] absolute bg-white rounded-[17px] border overflow-hidden`}>
         <div className="text-[#0054BB] pluto-black flex w-full px-2 h-full flex-col justify-center items-center text-center text-lg">
-          <p className="pluto-black uppercase text-lg md:text-xl whitespace-pre tracking-tighter leading-5 -mb-[1px]">{props.pregunta}</p>
+          <p className="pluto-black uppercase text-lg md:text-xl whitespace-pre tracking-tighter leading-5 -mb-[3px]">{props.pregunta}</p>
           <p className="text-xs md:text-sm whitespace-pre tracking-tighter">{props.categoria}</p>
           <div className="flex flex-row justify-center items-center gap-1 absolute bottom-2">
             <div className={`rounded-full aspect-square h-3 ${props.index == 1 ? "border-[#0054BA] bg-[#0054BA]" : "border-[#D9D9D9] bg-transparent"} border-2`} />

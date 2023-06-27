@@ -127,10 +127,10 @@ export const SingleCard = (props: any) => {
   return (
     <>
       {!props.tutorial && <div className={`${props.className} ${props.duration} ${props.animations} w-[290px] md:w-[325px] h-[160px] md:h-[200px] absolute bg-white rounded-[17px] border overflow-hidden`}>
-        <div className="aboslute tracking-tighter top-0 whitespace-pre bg-[#0054BB] w-full h-[30px] flex justify-center items-center text-[10px] uppercase md:text-xs">
+        <div className="aboslute tracking-tighter top-0 bg-[#0054BB] w-full h-[30px] flex justify-center items-center text-[10px] uppercase md:text-xs">
           {props.categoria}
         </div>
-        <div className="text-[#0054BB] whitespace-pre pluto-black flex w-full px-2 h-[80%] justify-center items-center text-center uppercase text-[15px] md:text-base">
+        <div className="text-[#0054BB] pluto-black flex w-full px-2 h-[80%] justify-center items-center text-center uppercase text-[15px] md:text-base">
           {props.pregunta}
         </div>
       </div>}

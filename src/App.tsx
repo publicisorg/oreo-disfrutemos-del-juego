@@ -14,7 +14,7 @@ function App() {
   const [showPopup, setShowPopup] = useState(false);
 
   function handleChange(data: any) {
-      setStart(data);
+    setStart(data);
   }
 
   useEffect(() => {
@@ -26,13 +26,13 @@ function App() {
   return (
     <>
       <main className={`w-full h-full absolute flex flex-col justify-center items-center duration-300 overflow-x-hidden`}>
-        {showPopup && <DatosPersonales setShowPopup={setShowPopup}/>}
-        <Background/>
+        {showPopup && <DatosPersonales setShowPopup={setShowPopup} />}
+        <Background />
         <Header />
-        {!start && <Home setStart={handleChange} setOpacity={setOpacity}/>}
-        {start && <Game setCardsCount={setCardsCount} countCards={countCards}/>}
-        {!start && <FooterStart opacity={opacity}/>}
-        {start && <Footer opacity={opacity}/>}
+        {!start && <Home setStart={handleChange} setOpacity={setOpacity} />}
+        {start && <Game setCardsCount={setCardsCount} countCards={countCards} />}
+        {!start && <FooterStart opacity={opacity} />}
+        {start && <Footer opacity={opacity} />}
       </main>
     </>
   );

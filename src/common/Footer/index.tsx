@@ -8,7 +8,7 @@ export const Footer = (props:any) => {
         </span>
         compartir
       </a>
-      <small className="text-[9px] md:text-xs xl:text-sm">Copyright © Mondelez International 2023. All Rights reserved.</small>
+      <small className="text-[8px] md:text-xs xl:text-sm">Copyright © Mondelez International 2023. All Rights reserved.</small>
     </footer>
   )
 }
@@ -37,7 +37,7 @@ export const FooterStart = (props:any) => {
           </p>
         </a>
       </div>
-      <small className="text-[9px] md:text-xs xl:text-sm">Copyright © Mondelez International 2023. All Rights reserved.</small>
+      <small className="text-[8px] md:text-xs xl:text-sm">Copyright © Mondelez International 2023. All Rights reserved.</small>
     </footer>
   )
 }

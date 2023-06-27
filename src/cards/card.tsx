@@ -31,32 +31,35 @@ export const CardsNew = (props: any) => {
   const [animations2, setAnimations2] = useState("-top-[1000px] scale-110 shadow-[0px_0px_3px_2px_#00000015]");
   const [animations3, setAnimations3] = useState("-top-[1000px] scale-110");
   const [animations4, setAnimations4] = useState("-top-[1000px] scale-110");
+  const [cardType, setCardType] = useState(true);
+  const [cardType2, setCardType2] = useState(true);
   const [tutorialStage, setTutorialStage] = useState(0);
-  const [enableControls, setEnableControls] = useState(false);
 
   useEffect(() => {
     const selectCard = cardsTutorial[tutorialStage];
     setActualCard(selectCard);
     setAnimatedCard(selectCard);
-    setAnimations4("top-0 bottom-0 scale-100");
     setTimeout(() => {
-      setAnimations3("top-0 bottom-0 scale-100");
-    }, 100);
-    setTimeout(() => {
-      setAnimations2("top-0 bottom-0 scale-100 shadow-[0px_0px_3px_2px_#00000015]");
+      setAnimations4("top-2 bottom-0 scale-100");
     }, 200);
     setTimeout(() => {
-      setAnimations("top-0 bottom-0 scale-100 shadow-[0px_0px_3px_2px_#00000015]");
+      setAnimations3("top-0 bottom-0 scale-100");
+    }, 250);
+    setTimeout(() => {
+      setAnimations2("top-0 bottom-0 scale-100 shadow-[0px_0px_3px_2px_#00000015]");
     }, 300);
     setTimeout(() => {
-      setEnableControls(true);
+      setAnimations("top-0 bottom-0 scale-100 shadow-[0px_0px_3px_2px_#00000015]");
+    }, 350);
+    setTimeout(() => {
+      props.setEnableControls(true);
       setTutorialStage(1);
     }, 1000)
   }, [])
 
   useEffect(() => {
-    if (enableControls) {
-      setEnableControls(false);
+    if (props.enableControls) {
+      props.setEnableControls(false);
       if (!props.tutorial) {
         props.setCardsCount(props.countCards + 1);
       }
@@ -85,21 +88,30 @@ export const CardsNew = (props: any) => {
         setAnimations("rotate-[45deg] -right-[1000px] bottom-0 top-0");
       }, 300);
       setTimeout(() => {
+        if (!props.tutorial && cardType) {
+          setCardType(false);
+        }
         setAnimatedCard(selectCard);
         setDuration('duration-0');
         setAnimations("left-0 right-0 bottom-0 top-0 rotate-0 scale-100 shadow-[0px_0px_3px_2px_#00000015]");
         setAnimations2("bottom-0 top-0 shadow-[0px_0px_3px_2px_#00000015]");
-        setEnableControls(true);
+        props.setEnableControls(true);
       }, 2000);
     }
   }, [props.changeCard])
 
+  useEffect(() => {
+    if (!props.tutorial) {
+      setCardType2(false);
+    }
+  }, [props.tutorial])
+
   return (
     <div className="relative w-full h-full text-white">
-      <SingleCard tutorial={props.tutorial} index={AnimatedCard.index} duration={duration} animations={animations} categoria={AnimatedCard.categoria} pregunta={AnimatedCard.pregunta} className="m-auto left-0 right-0 z-50" />
-      <SingleCard tutorial={props.tutorial} index={actualCard.index} duration={duration2} animations={animations2} categoria={actualCard.categoria} pregunta={actualCard.pregunta} className="m-auto left-0 right-0 z-40" />
-      <SingleCard tutorial={props.tutorial} index={actualCard.index} duration={duration3} animations={animations3} categoria={actualCard.categoria} pregunta={actualCard.pregunta} className="-rotate-6 m-auto top-0 left-4 right-0 z-30 shadow-[0px_0px_3px_2px_#00000030]" />
-      <SingleCard tutorial={props.tutorial} index={actualCard.index} duration={duration4} animations={animations4} categoria={actualCard.categoria} pregunta={actualCard.pregunta} className="rotate-[9deg] m-auto top-2 left-0 right-0 z-20 shadow-[0px_0px_3px_2px_#00000030]" />
+      <SingleCard tutorial={cardType} index={AnimatedCard.index} duration={duration} animations={animations} categoria={AnimatedCard.categoria} pregunta={AnimatedCard.pregunta} className="m-auto left-0 right-0 z-50" />
+      <SingleCard tutorial={cardType2} index={actualCard.index} duration={duration2} animations={animations2} categoria={actualCard.categoria} pregunta={actualCard.pregunta} className="m-auto left-0 right-0 z-40" />
+      <SingleCard tutorial={false} index={actualCard.index} duration={duration3} animations={animations3} className="-rotate-6 m-auto left-4 right-0 z-30 shadow-[0px_0px_3px_2px_#00000030]" />
+      <SingleCard tutorial={false} index={actualCard.index} duration={duration4} animations={animations4} className="rotate-[9deg] m-auto left-0 right-0 z-20 shadow-[0px_0px_3px_2px_#00000030]" />
     </div>
   )
 }

@@ -12,6 +12,7 @@ function Game(props:any) {
   const [tutorial, isTutorial] = useState(true);
   const [diceResult, setDiceResult] = useState(0);
   const [diceStop, setDiceStop] = useState(true);
+  const [enableControls, setEnableControls] = useState(false);
 
   useEffect(() => {
     isTutorial(true);
@@ -38,12 +39,13 @@ function Game(props:any) {
           setTutorial={isTutorial}
           diceStop={diceStop}
           isTutorial={isTutorial}
+          enableControls={enableControls}
           />
       </div>
       <div className="z-10 absolute left-0 top-0 w-full h-full flex flex-col justify-center items-center">
         <div className="h-1/3 w-full">
           {false && <Cards countCards={props.countCards} changeCard={changeCard} tutorial={tutorial} setCardsCount={props.setCardsCount}/>}
-          <CardsNew countCards={props.countCards} changeCard={changeCard} tutorial={tutorial} setCardsCount={props.setCardsCount}/>
+          <CardsNew enableControls={enableControls} setEnableControls={setEnableControls} countCards={props.countCards} changeCard={changeCard} tutorial={tutorial} setCardsCount={props.setCardsCount}/>
         </div>
         <div className={`w-full h-2/3 relative box-border duration-300`}>
           {true && <Dice setDiceStop={setDiceStop} setDiceResult={setDiceResult} tutorial={tutorial} refreshDice={refreshDice} />}

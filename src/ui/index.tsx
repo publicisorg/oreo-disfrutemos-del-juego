@@ -14,7 +14,7 @@ function UI(props: any) {
     }, [])
 
     function handleFlyOut() {
-        if (props.diceStop) {
+        if (props.diceStop && props.enableControls) {
             if (!props.tutorial) {
                 props.changeCards(!props.value);
             } else {
@@ -22,8 +22,8 @@ function UI(props: any) {
                 props.changeCards(!props.value);
                 setButtonLabel("SIGUIENTE PREGUNTA");
             }
-            setButtonOpacity("opacity-0 scale-0");
-            setShowMessage("opacity-0 scale-0");
+            //setButtonOpacity("opacity-0 scale-0");
+            //setShowMessage("opacity-0 scale-0");
             handleNext();
         }
     }
@@ -36,18 +36,18 @@ function UI(props: any) {
 
     function handleNext() {
         if (props.tutorial) {
-            setOpacity('opacity-0');
+            //setOpacity('opacity-0');
             setTimeout(() => {
                 setButtonLabel("SIGUIENTE PREGUNTA");
-                setOpacity('opacity-100');
+                //setOpacity('opacity-100');
             }, 300);
         } else {
-            setOpacity('opacity-0');
+            //setOpacity('opacity-0');
             setTimeout(() => {
                 setButtonLabel("SIGUIENTE PREGUNTA");
             }, 300);
             setTimeout(() => {
-                setOpacity('opacity-100');
+                //setOpacity('opacity-100');
             }, 310);
         }
     }
@@ -73,8 +73,8 @@ function UI(props: any) {
             </div>
 
             <div className={`${buttonOpacity} w-full bottom-0 text-white absolute flex justify-center items-center duration-300`}>
-                <button className="bg-[#F2F1F1] text-[#0054BA] h-[50px] min-w-[150px] text-lg px-3 rounded-md absolute z-50 bottom-4 -rotate-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.25)] pluto-black" onClick={() => handleFlyOut()}>
-                    <span className={`duration-300 pluto-black tracking-tighter ${opacity}`}>{buttonLabel}</span>
+                <button className={`${props.enableControls ? "bg-[#F2F1F1] text-[#0054BA]" : "bg-[#868686] text-[#85acdb]"}  h-[50px] min-w-[150px] text-lg px-3 rounded-md absolute z-50 bottom-4 -rotate-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.25)] pluto-black`} onClick={() => handleFlyOut()}>
+                    <span className={`duration-300 pluto-black tracking-tighter`}>{buttonLabel}</span>
                 </button>
             </div>
         </>

@@ -19,10 +19,7 @@ function UI(props: any) {
             } else {
                 props.setTutorial(false);
                 props.changeCards(!props.value);
-                setButtonLabel("SIGUIENTE PREGUNTA");
             }
-            //setButtonOpacity("opacity-0 scale-0");
-            //setShowMessage("opacity-0 scale-0");
             handleNext();
         }
     }
@@ -35,19 +32,17 @@ function UI(props: any) {
 
     function handleNext() {
         if (props.tutorial) {
-            //setOpacity('opacity-0');
-            setTimeout(() => {
-                setButtonLabel("SIGUIENTE PREGUNTA");
-                //setOpacity('opacity-100');
-            }, 300);
-        } else {
-            //setOpacity('opacity-0');
+            setButtonOpacity('opacity-0 scale-0');
             setTimeout(() => {
                 setButtonLabel("SIGUIENTE PREGUNTA");
             }, 300);
             setTimeout(() => {
-                //setOpacity('opacity-100');
+                setButtonOpacity('opacity-100 scale-100');
             }, 310);
+        } else {
+            setTimeout(() => {
+                setButtonLabel("SIGUIENTE PREGUNTA");
+            }, 300);
         }
     }
 

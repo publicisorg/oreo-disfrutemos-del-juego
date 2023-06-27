@@ -80,7 +80,7 @@ export const CardsNew = (props: any) => {
       }
       setActualCard(selectCard);
       setTimeout(() => {
-        setAnimations("rotate-6 right-[100px] bottom-0 top-0 scale-110 shadow-[0px_0px_3px_2px_#00000030]");
+        setAnimations("rotate-6 left-0 right-[100px] bottom-0 top-0 scale-110 shadow-[0px_0px_3px_2px_#00000030]");
         setAnimations2("bottom-0 top-0 left-0 right-0 shadow-[0px_0px_3px_2px_#00000030]");
       }, 50);
       setTimeout(() => {

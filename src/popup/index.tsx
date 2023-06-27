@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import useSound from 'use-sound';
 
 function DatosPersonales(props: any) {
 
@@ -9,6 +10,7 @@ function DatosPersonales(props: any) {
     const [tickAnim, setTickAnim] = useState("scale-0 stroke-lime-900 rotate-12");
     const [tickDuration, setTickDuration] = useState("duration-500");
     const [containerOpacity, setContainerOpacity] = useState("opacity-0 scale-0");
+    const [tickSound] = useSound('./assets/sounds/color4.mp3',{ volume: 0.10 });
 
     useEffect(() => {
         setBgOpacity("opacity-100");
@@ -48,6 +50,7 @@ function DatosPersonales(props: any) {
         setTickAnim("scale-110 stroke-lime-400 -rotate-3");
         setTimeout(() => {
             setTickDuration("duration-200");
+            tickSound();
             setTickAnim("scale-100 stroke-white rotate-0");
         }, 500);
     }

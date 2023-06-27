@@ -1,11 +1,13 @@
 
 import { useEffect, useState } from "react";
 import DiceBox from '@3d-dice/dice-box'
+import useSound from 'use-sound';
 
 function Dice(props: any) {
 
     const [diceBox, setDiceBox] = useState<any>([]);
     const [diceBoxReady, setDiceBoxReady] = useState<any>([]);
+    const [prepareDiceSound] = useSound('./assets/sounds/dice.mp3', { volume: 0.10 });
 
     useEffect(() => {
 
@@ -32,6 +34,7 @@ function Dice(props: any) {
     useEffect(() => {
         if (diceBoxReady) {
             if (!props.tutorial) {
+                prepareDiceSound();
                 diceBox.roll('1d6');
                 props.setDiceStop(false);
                 diceBox.onDieComplete = (results) => {

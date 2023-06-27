@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import cards from "./cards.json"
+import useSound from 'use-sound';
 
 const cardsTutorial = [
   {
@@ -35,6 +36,7 @@ export const CardsNew = (props: any) => {
   const [cardType2, setCardType2] = useState(true);
   const [tutorialStage, setTutorialStage] = useState(0);
   const [desplazamiento, setDesplazamiento] = useState("-right-[1000px]");
+  const [cardflipSound] = useSound('./assets/sounds/cardflip.mp3',{ volume: 0.01 });
 
   useEffect(() => {
     if (window.innerWidth > 1000 && window.innerWidth < 1500) {
@@ -92,6 +94,7 @@ export const CardsNew = (props: any) => {
       }, 50);
       setTimeout(() => {
         setDuration('duration-1000');
+        cardflipSound();
         setAnimations("rotate-[45deg] " + desplazamiento + " left-0 bottom-0 top-0");
       }, 300);
       setTimeout(() => {

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import colors from './colors.json'
+import useSound from 'use-sound';
 
 function UI(props: any) {
 
@@ -7,6 +8,10 @@ function UI(props: any) {
     const [buttonOpacity, setButtonOpacity] = useState("opacity-0 scale-0");
     const [showMessage, setShowMessage] = useState("opacity-0 scale-0");
     const [buttonLabel, setButtonLabel] = useState("EMPEZAR");
+
+    const [buttonSound] = useSound('./assets/sounds/disabled2.mp3',{ volume: 0.10 });
+    const [colorSound] = useSound('./assets/sounds/color.mp3',{ volume: 0.10 });
+    const [buttonDisabledSound] = useSound('./assets/sounds/disabled.mp3',{ volume: 0.10 });
 
     useEffect(() => {
         setButtonOpacity('opacity-100 scale-100');
@@ -16,11 +21,15 @@ function UI(props: any) {
         if (props.diceStop && props.enableControls) {
             if (!props.tutorial) {
                 props.changeCards(!props.value);
+                buttonSound();
             } else {
+                buttonSound();
                 props.setTutorial(false);
                 props.changeCards(!props.value);
             }
             handleNext();
+        } else {
+            buttonDisabledSound();
         }
     }
 
@@ -49,6 +58,7 @@ function UI(props: any) {
     useEffect(() => {
         setDiceResultColor(colors[props.diceResult].color);
         if (props.diceResult != 0 && props.diceStop) {
+            colorSound();
             setShowMessage("opacity-100 scale-100");
             setButtonOpacity("opacity-100 scale-100");
         } else {

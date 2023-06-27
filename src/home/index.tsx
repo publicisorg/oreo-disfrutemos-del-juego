@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import useSound from 'use-sound';
 
 function Home(props: any) {
 
@@ -6,12 +7,14 @@ function Home(props: any) {
     const [rotation, setRotation] = useState('rotate-0');
     const [scale, setScale] = useState('scale-100');
     const [duration, setDuration] = useState('duration-300');
+    const [playSound] = useSound('./assets/sounds/button.mp3',{ volume: 0.10 });
 
     function hideHome() {
         setDuration('duration-200');
         setScale('scale-110');
         setRotation('rotate-12');
         setTimeout(() => {
+            playSound();
             setDuration('duration-500');
             setScale('scale-0');
             setRotation('-rotate-180');

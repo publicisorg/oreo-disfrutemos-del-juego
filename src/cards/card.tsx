@@ -82,7 +82,7 @@ export const CardsNew = (props: any) => {
       }, 50);
       setTimeout(() => {
         setDuration('duration-1000');
-        setAnimations("rotate-[45deg] -right-[3000px] bottom-0 top-0");
+        setAnimations("rotate-[45deg] -right-[1000px] bottom-0 top-0");
       }, 300);
       setTimeout(() => {
         setAnimatedCard(selectCard);

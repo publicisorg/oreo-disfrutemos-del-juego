@@ -34,8 +34,15 @@ export const CardsNew = (props: any) => {
   const [cardType, setCardType] = useState(true);
   const [cardType2, setCardType2] = useState(true);
   const [tutorialStage, setTutorialStage] = useState(0);
+  const [desplazamiento, setDesplazamiento] = useState("-right-[1000px]");
 
   useEffect(() => {
+    if (window.innerWidth > 1000 && window.innerWidth < 1500) {
+      setDesplazamiento("-right-[2000px]");
+    }
+    if (window.innerWidth > 1500) {
+      setDesplazamiento("-right-[3000px]");
+    }
     const selectCard = cardsTutorial[tutorialStage];
     setActualCard(selectCard);
     setAnimatedCard(selectCard);
@@ -85,7 +92,7 @@ export const CardsNew = (props: any) => {
       }, 50);
       setTimeout(() => {
         setDuration('duration-1000');
-        setAnimations("rotate-[45deg] -right-[1000px] bottom-0 top-0");
+        setAnimations("rotate-[45deg] " + desplazamiento + " bottom-0 top-0");
       }, 300);
       setTimeout(() => {
         if (!props.tutorial && cardType) {

@@ -10,7 +10,6 @@ function Dice(props: any) {
     const [prepareDiceSound] = useSound('./assets/sounds/dice.mp3', { volume: 0.10 });
 
     useEffect(() => {
-
         setDiceBox(new DiceBox("#dice-box", {
             assetPath: "/assets/dice-box/", // required
             theme: "default",
@@ -19,7 +18,8 @@ function Dice(props: any) {
             scale: 9,
             lightIntensity: 1,
             shadowTransparency: 0.9,
-            throwForce: 2
+            throwForce: 2,
+            suspendAnimation: props.disableAnimation
         }))
     }, [])
 

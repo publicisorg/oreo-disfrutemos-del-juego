@@ -12,6 +12,7 @@ function App() {
   const [countCards, setCardsCount] = useState(0);
   const [opacity, setOpacity] = useState("opacity-100");
   const [showPopup, setShowPopup] = useState(false);
+  const [disableAnimation, setDisableAnimation] = useState(false);
 
   function handleChange(data: any) {
     setStart(data);
@@ -23,6 +24,21 @@ function App() {
     }
   }, [countCards])
 
+  function detectWebGLContext() {
+    const canvas = document.createElement("canvas");
+    const gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl") || canvas.getContext("moz-webgl") || canvas.getContext("webkit-3d");
+    const webglcheck = gl instanceof WebGLRenderingContext ? true : false;
+    return webglcheck;
+  }
+
+  useEffect(() => {
+    if (detectWebGLContext()) {
+      setDisableAnimation(false);
+    } else {
+      setDisableAnimation(true);
+    }
+  }, [])
+
   return (
     <>
       <main className={`w-full h-full absolute flex flex-col justify-center items-center duration-300 overflow-x-hidden`}>
@@ -30,7 +46,7 @@ function App() {
         <Background />
         <Header />
         {!start && <Home setStart={handleChange} setOpacity={setOpacity} />}
-        {start && <Game setCardsCount={setCardsCount} countCards={countCards} />}
+        {start && <Game disableAnimation={disableAnimation} setCardsCount={setCardsCount} countCards={countCards} />}
         {!start && <FooterStart opacity={opacity} />}
         {start && <Footer opacity={opacity} />}
       </main>

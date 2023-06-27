@@ -49,7 +49,7 @@ export const CardsNew = (props: any) => {
       setAnimations2("top-0 bottom-0 scale-100 shadow-[0px_0px_3px_2px_#00000015]");
     }, 300);
     setTimeout(() => {
-      setAnimations("top-0 bottom-0 scale-100 shadow-[0px_0px_3px_2px_#00000015]");
+      setAnimations("top-0 bottom-0 left-0 right-0 scale-100 shadow-[0px_0px_3px_2px_#00000015]");
     }, 350);
     setTimeout(() => {
       props.setEnableControls(true);
@@ -108,7 +108,7 @@ export const CardsNew = (props: any) => {
 
   return (
     <div className="relative w-full h-full text-white">
-      <SingleCard tutorial={cardType} index={AnimatedCard.index} duration={duration} animations={animations} categoria={AnimatedCard.categoria} pregunta={AnimatedCard.pregunta} className="m-auto left-0 right-0 z-50" />
+      <SingleCard tutorial={cardType} index={AnimatedCard.index} duration={duration} animations={animations} categoria={AnimatedCard.categoria} pregunta={AnimatedCard.pregunta} className="m-auto z-50" />
       <SingleCard tutorial={cardType2} index={actualCard.index} duration={duration2} animations={animations2} categoria={actualCard.categoria} pregunta={actualCard.pregunta} className="m-auto left-0 right-0 z-40" />
       <SingleCard tutorial={false} index={actualCard.index} duration={duration3} animations={animations3} className="-rotate-6 m-auto left-4 right-0 z-30 shadow-[0px_0px_3px_2px_#00000030]" />
       <SingleCard tutorial={false} index={actualCard.index} duration={duration4} animations={animations4} className="rotate-[9deg] m-auto left-0 right-0 z-20 shadow-[0px_0px_3px_2px_#00000030]" />

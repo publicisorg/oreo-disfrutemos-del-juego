@@ -27,7 +27,7 @@ export const CardsNew = (props: any) => {
   const [duration2, setDuration2] = useState("duration-1000");
   const [duration3, setDuration3] = useState("duration-1000");
   const [duration4, setDuration4] = useState("duration-1000");
-  const [animations, setAnimations] = useState("-top-[1000px] scale-110 shadow-[0px_0px_3px_2px_#00000015]");
+  const [animations, setAnimations] = useState("-top-[1000px] left-0 right-0 scale-110 shadow-[0px_0px_3px_2px_#00000015]");
   const [animations2, setAnimations2] = useState("-top-[1000px] scale-110 shadow-[0px_0px_3px_2px_#00000015]");
   const [animations3, setAnimations3] = useState("-top-[1000px] scale-110");
   const [animations4, setAnimations4] = useState("-top-[1000px] scale-110");
@@ -56,7 +56,7 @@ export const CardsNew = (props: any) => {
       setAnimations2("top-0 bottom-0 scale-100 shadow-[0px_0px_3px_2px_#00000015]");
     }, 300);
     setTimeout(() => {
-      setAnimations("top-0 bottom-0 left-0 right-0 scale-100 shadow-[0px_0px_3px_2px_#00000015]");
+      setAnimations("top-0 bottom-0 right-0 left-0 scale-100 shadow-[0px_0px_3px_2px_#00000015]");
     }, 350);
     setTimeout(() => {
       props.setEnableControls(true);
@@ -87,12 +87,12 @@ export const CardsNew = (props: any) => {
       }
       setActualCard(selectCard);
       setTimeout(() => {
-        setAnimations("rotate-6 left-0 right-[100px] bottom-0 top-0 scale-110 shadow-[0px_0px_3px_2px_#00000030]");
+        setAnimations("rotate-6 right-[100px] left-0 bottom-0 top-0 scale-110 shadow-[0px_0px_3px_2px_#00000030]");
         setAnimations2("bottom-0 top-0 left-0 right-0 shadow-[0px_0px_3px_2px_#00000030]");
       }, 50);
       setTimeout(() => {
         setDuration('duration-1000');
-        setAnimations("rotate-[45deg] " + desplazamiento + " bottom-0 top-0");
+        setAnimations("rotate-[45deg] " + desplazamiento + " left-0 bottom-0 top-0");
       }, 300);
       setTimeout(() => {
         if (!props.tutorial && cardType) {

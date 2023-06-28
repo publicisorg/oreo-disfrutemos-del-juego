@@ -94,8 +94,8 @@ function DatosPersonales(props: any) {
                     </div>}
                     {!showThanks && <form className={`${formOpacity} duration-300`} onSubmit={(e) => handleSubmit(e)}>
                         <div className="py-20 flex justify-center items-center flex-col gap-4">
-                            <p className="w-3/4 text-xl text-center">¡Participa del sorteo <br />
-                                y gana el juego Oreo, <br />
+                            <p className="w-3/4 text-xl text-center">¡Participá del sorteo <br />
+                                y ganá el juego Oreo, <br />
                                 en versión física!</p>
                             <p className="text-sm">
                                 Completá con tus datos.

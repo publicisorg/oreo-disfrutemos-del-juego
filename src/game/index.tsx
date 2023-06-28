@@ -40,7 +40,7 @@ function Game(props: any) {
     if (tutorial) {
       setTimeout(() => {
         toggleCards(!changeCard);
-      }, 5000);
+      }, 7000);
     }
   }, [enableControls])
 

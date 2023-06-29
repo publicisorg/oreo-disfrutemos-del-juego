@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import DiceBox from '@3d-dice/dice-box'
+import DiceBox from '../diceboxCompiled/dice-box.es.js'
 import useSound from 'use-sound';
 
 function Dice(props: any) {
@@ -23,6 +23,7 @@ function Dice(props: any) {
     }, [])
 
     useEffect(() => {
+        
         if (diceBox?.length != 0) {
             diceBox.init().then(() => {
                 setDiceBoxReady(true);
@@ -45,7 +46,7 @@ function Dice(props: any) {
     }, [props.refreshDice])
 
     return (
-        <div id="dice-box" className={`w-full h-3/5 lg:h-4/5 relative box-border duration-300`} />
+        <div id="dice-box" className={`w-full h-3/5 md:h-2/3 lg:h-full relative box-border duration-300`} />
     )
 }
 

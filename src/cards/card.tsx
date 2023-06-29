@@ -129,22 +129,22 @@ export const CardsNew = (props: any) => {
 export const SingleCard = (props: any) => {
   return (
     <>
-      {!props.tutorial && <div className={`${props.className} ${props.duration} ${props.animations} w-[290px] md:w-[325px] h-[160px] md:h-[200px] absolute bg-white rounded-[17px] border overflow-hidden`}>
-        <div className="aboslute tracking-tighter pt-[1px] top-0 bg-[#0054BB] w-full h-[30px] flex justify-center items-center text-[10px] uppercase md:text-xs">
+      {!props.tutorial && <div className={`${props.className} ${props.duration} ${props.animations} w-[290px] md:w-[325px] xl:w-[350px] h-[160px] md:h-[200px] xl:h-[225px] absolute bg-white rounded-[17px] border overflow-hidden`}>
+        <div className="aboslute tracking-tighter pt-[1px] top-0 bg-[#0054BB] w-full h-[30px] flex justify-center items-center text-[10px] uppercase md:text-xs xl:text-sm">
           {props.categoria}
         </div>
-        <div className="text-[#0054BB] pluto-black flex w-full p-4 px-6 h-[80%] justify-center items-center text-center uppercase text-[14px] md:text-base">
+        <div className="text-[#0054BB] pluto-black flex w-full p-4 px-6 h-[80%] justify-center items-center text-center uppercase text-[14px] md:text-base xl:text-xl">
           {props.pregunta}
         </div>
       </div>}
-      {props.tutorial && <div className={`${props.className} ${props.duration} ${props.animations} w-[290px] md:w-[325px] h-[160px] md:h-[200px] absolute bg-white rounded-[17px] border overflow-hidden`}>
+      {props.tutorial && <div className={`${props.className} ${props.duration} ${props.animations} w-[290px] md:w-[325px] xl:w-[350px] h-[160px] md:h-[200px] xl:h-[225px] absolute bg-white rounded-[17px] border overflow-hidden`}>
         <div className="text-[#0054BB] pluto-black flex w-full px-2 h-full flex-col justify-center items-center text-center text-lg">
-          <p className="pluto-black uppercase text-lg md:text-xl whitespace-pre tracking-tighter leading-5">{props.pregunta}</p>
-          <p className="text-xs md:text-sm whitespace-pre tracking-tighter">{props.categoria}</p>
+          <p className="pluto-black uppercase text-lg md:text-xl xl:text-2xl whitespace-pre tracking-tighter leading-5">{props.pregunta}</p>
+          <p className="text-xs md:text-sm xl:text-base whitespace-pre tracking-tighter">{props.categoria}</p>
           <div className="flex flex-row justify-center items-center gap-1 absolute bottom-2">
-            <div className={`rounded-full aspect-square h-[9px] ${props.index == 1 ? "border-[#0054BA] bg-[#0054BA]" : "border-[#D9D9D9] bg-transparent"} border`} />
-            <div className={`rounded-full aspect-square h-[9px] ${props.index == 2 ? "border-[#0054BA] bg-[#0054BA]" : "border-[#D9D9D9] bg-transparent"} border`} />
-            <div className={`rounded-full aspect-square h-[9px] ${props.index == 3 ? "border-[#0054BA] bg-[#0054BA]" : "border-[#D9D9D9] bg-transparent"} border`} />
+            <div className={`rounded-full aspect-square h-[9px] md:h-[11px] xl:h-[12px] ${props.index == 1 ? "border-[#0054BA] bg-[#0054BA]" : "border-[#D9D9D9] bg-transparent"} border`} />
+            <div className={`rounded-full aspect-square h-[9px] md:h-[11px] xl:h-[12px] ${props.index == 2 ? "border-[#0054BA] bg-[#0054BA]" : "border-[#D9D9D9] bg-transparent"} border`} />
+            <div className={`rounded-full aspect-square h-[9px] md:h-[11px] xl:h-[12px] ${props.index == 3 ? "border-[#0054BA] bg-[#0054BA]" : "border-[#D9D9D9] bg-transparent"} border`} />
           </div>
         </div>
       </div>}

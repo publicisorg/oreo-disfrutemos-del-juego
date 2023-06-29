@@ -10,7 +10,6 @@ function App() {
 
   const [start, setStart] = useState(false);
   const [countCards, setCardsCount] = useState(0);
-  const [opacity, setOpacity] = useState("opacity-100");
   const [showPopup, setShowPopup] = useState(false);
   const [disableAnimation, setDisableAnimation] = useState(false);
 
@@ -45,10 +44,10 @@ function App() {
         {showPopup && <DatosPersonales setShowPopup={setShowPopup} />}
         <Background />
         <Header />
-        {!start && <Home setStart={handleChange} setOpacity={setOpacity} />}
+        {!start && <Home setStart={handleChange} />}
         {start && <Game disableAnimation={disableAnimation} setCardsCount={setCardsCount} countCards={countCards} />}
-        {!start && <FooterStart opacity={opacity} />}
-        {start && <Footer opacity={opacity} />}
+        {false && <FooterStart/>}
+        {true && <Footer start={start} />}
       </main>
     </>
   );

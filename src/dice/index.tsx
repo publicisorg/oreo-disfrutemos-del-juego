@@ -23,20 +23,21 @@ function Dice(props: any) {
     }, [])
 
     useEffect(() => {
-        
+
         if (diceBox?.length != 0) {
             diceBox.init().then(() => {
                 setDiceBoxReady(true);
+                diceBox.roll('1d6');
             });
         }
     }, [diceBox])
 
     useEffect(() => {
-        if (diceBoxReady && props.diceStop) {
+        if (diceBoxReady) {
             if (!props.tutorial) {
-                props.setDiceStop(false);
                 prepareDiceSound();
                 diceBox.roll('1d6');
+                props.setDiceStop(false);
                 diceBox.onDieComplete = (results) => {
                     props.setDiceResult(results.value);
                     props.setDiceStop(true);

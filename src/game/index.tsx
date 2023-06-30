@@ -32,14 +32,6 @@ function Game(props: any) {
   }, [changeCard])
 
   useEffect(() => {
-    if (props.disableAnimation && !tutorial) {
-      setTimeout(() => {
-        setDiceResult(Math.floor(Math.random() * (6 - 1 + 1) + 1))
-      }, 300);
-    }
-  }, [refreshDice])
-
-  useEffect(() => {
     if (queueAction && tutorial) {
       setQueueAction(false);
       isTutorial(false);

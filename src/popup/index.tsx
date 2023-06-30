@@ -103,15 +103,15 @@ function DatosPersonales(props: any) {
                             <input required placeholder="E-mail" name="mail" id="mail" className="bg-white !text-[#0055B0] rounded-3xl px-4 py-2 w-[80%]" />
                             <div className="w-full flex flex-col justify-start items-center gap-2">
                                 <div className="flex flex-row justify-start items-center gap-2 w-3/4">
-                                    <input required id="mayor" name="mayor" type="checkbox" />
+                                    <input required id="mayor" name="mayor" type="checkbox" className="h-3 w-3"/>
                                     <label className="text-xs font-light" htmlFor="mayor">Soy mayor de 18 años</label>
                                 </div>
                                 <div className="flex flex-row justify-start items-center gap-2 w-3/4">
-                                    <input id="novedades" name="novedades" type="checkbox" />
+                                    <input id="novedades" name="novedades" type="checkbox" className="h-3 w-3"/>
                                     <label className="text-xs font-light" htmlFor="novedades">Acepto recibir novedades e información de Oreo.</label>
                                 </div>
                                 <div className="flex flex-row justify-start items-center gap-2 w-3/4">
-                                    <input required id="politica" name="politica" type="checkbox" />
+                                    <input required id="politica" name="politica" type="checkbox" className="h-3 w-3"/>
                                     <label className="text-xs font-light" htmlFor="politica">Acepto <a href="#" className="underline" target="_blank">la Política de privacidad de Oreo.</a></label>
                                 </div>
                             </div>

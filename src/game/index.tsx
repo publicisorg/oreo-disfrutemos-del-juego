@@ -63,7 +63,6 @@ function Game(props: any) {
             value={changeCard}
             diceResult={diceResult}
             tutorial={tutorial}
-            setTutorial={isTutorial}
             diceStop={diceStop}
             isTutorial={isTutorial}
             enableControls={enableControls}
@@ -75,7 +74,7 @@ function Game(props: any) {
             <CardsNew enableControls={enableControls} setEnableControls={setEnableControls} countCards={props.countCards} changeCard={changeCard} tutorial={tutorial} setCardsCount={props.setCardsCount} />
           </div>
           <div className={`w-full h-2/3 md:h-2/5 relative box-border duration-300`}>
-            {!props.disableAnimation && <Dice disableAnimation={props.disableAnimation} setDiceStop={setDiceStop} setDiceResult={setDiceResult} tutorial={tutorial} refreshDice={refreshDice} />}
+            <Dice setDiceStop={setDiceStop} setDiceResult={setDiceResult} tutorial={tutorial} refreshDice={refreshDice} />
           </div>
         </div>
       </div>

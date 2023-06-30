@@ -32,11 +32,11 @@ function Dice(props: any) {
     }, [diceBox])
 
     useEffect(() => {
-        if (diceBoxReady) {
+        if (diceBoxReady && props.diceStop) {
             if (!props.tutorial) {
+                props.setDiceStop(false);
                 prepareDiceSound();
                 diceBox.roll('1d6');
-                props.setDiceStop(false);
                 diceBox.onDieComplete = (results) => {
                     props.setDiceResult(results.value);
                     props.setDiceStop(true);

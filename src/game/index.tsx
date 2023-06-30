@@ -12,6 +12,7 @@ function Game(props: any) {
   const [diceResult, setDiceResult] = useState(0);
   const [diceStop, setDiceStop] = useState(true);
   const [enableControls, setEnableControls] = useState(false);
+  const [queueAction, setQueueAction] = useState(false);
 
   useEffect(() => {
     isTutorial(true);
@@ -20,6 +21,9 @@ function Game(props: any) {
   useEffect(() => {
     if (!diceStop) {
       setDiceResult(0);
+      setEnableControls(false);
+    } else {
+      setEnableControls(true);
     }
   }, [diceStop])
 
@@ -36,9 +40,14 @@ function Game(props: any) {
   }, [refreshDice])
 
   useEffect(() => {
-    if (tutorial) {
+    if (queueAction && tutorial) {
+      setQueueAction(false);
+      isTutorial(false);
+      toggleCards(!changeCard);
+    }
+    if (tutorial && enableControls) {
       setTimeout(() => {
-        if (tutorial) {
+        if (tutorial && enableControls) {
           toggleCards(!changeCard);
         }
       }, 7500);
@@ -58,6 +67,7 @@ function Game(props: any) {
             diceStop={diceStop}
             isTutorial={isTutorial}
             enableControls={enableControls}
+            setQueueAction={setQueueAction}
           />
         </div>
         <div className="z-10 absolute left-0 top-0 w-full h-full flex flex-col justify-start items-center">

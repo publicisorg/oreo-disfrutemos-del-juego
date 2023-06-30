@@ -68,7 +68,9 @@ export const CardsNew = (props: any) => {
 
   useEffect(() => {
     if (props.enableControls) {
-      props.setEnableControls(false);
+      if (props.tutorial) {
+        props.setEnableControls(false);
+      }
       if (!props.tutorial) {
         props.setCardsCount(props.countCards + 1);
       }
@@ -105,7 +107,9 @@ export const CardsNew = (props: any) => {
         setDuration('duration-0');
         setAnimations("left-0 right-0 bottom-0 top-0 rotate-0 scale-100 shadow-[0px_0px_3px_2px_#00000015]");
         setAnimations2("bottom-0 top-0 shadow-[0px_0px_3px_2px_#00000015]");
-        props.setEnableControls(true);
+        if (props.tutorial) {
+          props.setEnableControls(true);
+        }
       }, 2000);
     }
   }, [props.changeCard])

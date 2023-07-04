@@ -90,17 +90,17 @@ function UI(props: any) {
         <>
             <div className="flex flex-col w-full h-full">
                 <div className={`${margin} h-2/5 w-full`} onClick={() => handleNextTutorial()} />
-                <div className="h-2/5 xl:h-3/5 w-full" onClick={() => handleFlyOut()} />
+                <div className="h-2/5 2xl:h-3/5 w-full" onClick={() => handleFlyOut()} />
             </div>
-            <div className={`${showMessage} absolute bottom-[5.2rem] lg:bottom-[5.8rem] w-full flex justify-center items-center duration-300`}>
-                <div className={`max-w-[450px] text-white text-xs lg:text-[13px] uppercase duration-300 h-[55px] px-8 pt-1 rounded-full w-[320px] text-center flex justify-center items-center`} style={{ backgroundColor: diceResultColor }}>
+            <div className={`${showMessage} absolute bottom-[5.2rem] 2xl:bottom-[5.8rem] w-full flex justify-center items-center duration-300`}>
+                <div className={`max-w-[450px] text-white text-xs 2xl:text-[13px] uppercase duration-300 h-[55px] px-8 pt-1 rounded-full w-[280px] 2xl:w-[320px] text-center flex justify-center items-center`} style={{ backgroundColor: diceResultColor }}>
                     {colors[props.diceResult].text}
                 </div>
             </div>
 
             <div className={`${buttonOpacity} w-full bottom-0 text-white absolute flex justify-center items-center duration-300`}>
                 <button
-                    className={`${buttonEnabled ? "bg-[#F2F1F1] text-[#0054BA]" : "bg-[#b6b6b6] text-[#0054BA]"} duration-300 h-[60px] lg:h-[70px] min-w-[170px] lg:min-w-[215px] text-2xl px-3 rounded-md absolute z-50 bottom-4 -rotate-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.25)] pluto-black`}
+                    className={`${buttonEnabled ? "bg-[#F2F1F1] text-[#0054BA]" : "bg-[#b6b6b6] text-[#0054BA]"} duration-300 h-[60px] 2xl:h-[70px] min-w-[170px] 2xl:min-w-[215px] text-xl 2xl:text-2xl px-3 rounded-md absolute z-50 bottom-4 -rotate-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.25)] pluto-black`}
                     onClick={() => handleFlyOut()}>
                     <span className={`duration-300 pluto-black tracking-tighter`}>{buttonLabel}</span>
                 </button>

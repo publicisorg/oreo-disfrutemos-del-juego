@@ -41,7 +41,7 @@ export const CardsNew = (props: any) => {
 
   useEffect(() => {
     if (props.tutorial && window.innerWidth > 1023) {
-      setDesktopTutorial("mt-[30%]");
+      setDesktopTutorial("md:mt-[10%] xl:mt-[30%]");
     }
     if (window.innerWidth > 1000 && window.innerWidth < 1500) {
       setDesplazamiento("-right-[2000px]");

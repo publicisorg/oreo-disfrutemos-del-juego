@@ -14,7 +14,7 @@ function Dice(props: any) {
         const height = window.innerHeight;
         const absoluteResolution = width * height;
         if (absoluteResolution > 0 && absoluteResolution <= 786432) {
-            diceScale = 15;
+            diceScale = 12;
         }
         if (absoluteResolution > 786432 && absoluteResolution <= 921600) {
             diceScale = 9;

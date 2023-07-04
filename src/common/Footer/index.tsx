@@ -18,7 +18,7 @@ export const Footer = (props:any) => {
         <a href="https://www.instagram.com/recetoreo/" target="_blank" className="flex flex-row justify-center items-center gap-1">
           <img className="h-5 aspect-square fill-white" src="icon-IG.svg" />
           <p className="text-[11px] mt-[3px] md:text-xs xl:text-sm">
-            Recetoreo
+            RecetOreo
           </p>
         </a>
         <a href="https://www.facebook.com/oreoargentina" target="_blank" className="flex flex-row justify-center items-center gap-1">

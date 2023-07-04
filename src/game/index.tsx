@@ -42,7 +42,7 @@ function Game(props: any) {
         if (tutorial && enableControls) {
           toggleCards(!changeCard);
         }
-      }, 7500);
+      }, 5000);
     }
   }, [enableControls])
 

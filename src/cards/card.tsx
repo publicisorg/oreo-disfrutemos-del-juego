@@ -32,6 +32,7 @@ export const CardsNew = (props: any) => {
   const [animations2, setAnimations2] = useState("-top-[1000px] scale-110 shadow-[0px_0px_3px_2px_#00000015]");
   const [animations3, setAnimations3] = useState("-top-[1000px] scale-110");
   const [animations4, setAnimations4] = useState("-top-[1000px] scale-110");
+  const [desktopTutorial, setDesktopTutorial] = useState("");
   const [cardType, setCardType] = useState(true);
   const [cardType2, setCardType2] = useState(true);
   const [tutorialStage, setTutorialStage] = useState(0);
@@ -39,6 +40,9 @@ export const CardsNew = (props: any) => {
   const [cardflipSound] = useSound('./assets/sounds/cardflip.mp3',{ volume: 0.01 });
 
   useEffect(() => {
+    if (props.tutorial && window.innerWidth > 1023) {
+      setDesktopTutorial("mt-32");
+    }
     if (window.innerWidth > 1000 && window.innerWidth < 1500) {
       setDesplazamiento("-right-[2000px]");
     }
@@ -67,6 +71,13 @@ export const CardsNew = (props: any) => {
   }, [])
 
   useEffect(() => {
+    if (!props.tutorial) {
+      setDuration2("duration-1000");
+      setDuration3("duration-1000");
+      setDuration4("duration-1000");
+      setDuration('duration-1000');
+      setDesktopTutorial("mt-0");
+    }
     if (props.enableControls) {
       if (props.tutorial) {
         props.setEnableControls(false);
@@ -122,10 +133,10 @@ export const CardsNew = (props: any) => {
 
   return (
     <div className="relative w-full h-full text-white">
-      <SingleCard tutorial={cardType} index={AnimatedCard.index} duration={duration} animations={animations} categoria={AnimatedCard.categoria} pregunta={AnimatedCard.pregunta} className="m-auto z-50" />
-      <SingleCard tutorial={cardType2} index={actualCard.index} duration={duration2} animations={animations2} categoria={actualCard.categoria} pregunta={actualCard.pregunta} className="m-auto left-0 right-0 z-40" />
-      <SingleCard tutorial={false} index={actualCard.index} duration={duration3} animations={animations3} className="-rotate-6 m-auto left-4 right-0 z-30 shadow-[0px_0px_3px_2px_#00000030]" />
-      <SingleCard tutorial={false} index={actualCard.index} duration={duration4} animations={animations4} className="rotate-[9deg] m-auto left-0 right-0 z-20 shadow-[0px_0px_3px_2px_#00000030]" />
+      <SingleCard tutorial={cardType} index={AnimatedCard.index} duration={duration} animations={animations} desktopTutorial={desktopTutorial} categoria={AnimatedCard.categoria} pregunta={AnimatedCard.pregunta} className="m-auto z-50" />
+      <SingleCard tutorial={cardType2} index={actualCard.index} duration={duration2} animations={animations2} desktopTutorial={desktopTutorial} categoria={actualCard.categoria} pregunta={actualCard.pregunta} className="m-auto left-0 right-0 z-40" />
+      <SingleCard tutorial={false} index={actualCard.index} duration={duration3} animations={animations3} desktopTutorial={desktopTutorial} className="-rotate-6 m-auto left-4 right-0 z-30 shadow-[0px_0px_3px_2px_#00000030]" />
+      <SingleCard tutorial={false} index={actualCard.index} duration={duration4} animations={animations4} desktopTutorial={desktopTutorial} className="rotate-[9deg] m-auto left-0 right-0 z-20 shadow-[0px_0px_3px_2px_#00000030]" />
     </div>
   )
 }
@@ -133,7 +144,7 @@ export const CardsNew = (props: any) => {
 export const SingleCard = (props: any) => {
   return (
     <>
-      {!props.tutorial && <div className={`${props.className} ${props.duration} ${props.animations} w-[290px] md:w-[325px] xl:w-[350px] h-[160px] md:h-[200px] xl:h-[225px] absolute bg-white rounded-[17px] border overflow-hidden`}>
+      {!props.tutorial && <div className={`${props.className} ${props.duration} ${props.animations} ${props.desktopTutorial} w-[290px] md:w-[325px] xl:w-[350px] h-[160px] md:h-[200px] xl:h-[225px] absolute bg-white rounded-[17px] border overflow-hidden`}>
         <div className="aboslute tracking-tighter pt-[1px] top-0 bg-[#0054BB] w-full h-[30px] flex justify-center items-center text-[10px] uppercase md:text-xs xl:text-sm">
           {props.categoria}
         </div>
@@ -141,7 +152,7 @@ export const SingleCard = (props: any) => {
           {props.pregunta}
         </div>
       </div>}
-      {props.tutorial && <div className={`${props.className} ${props.duration} ${props.animations} w-[290px] md:w-[325px] xl:w-[350px] h-[160px] md:h-[200px] xl:h-[225px] absolute bg-white rounded-[17px] border overflow-hidden`}>
+      {props.tutorial && <div className={`${props.className} ${props.duration} ${props.animations} ${props.desktopTutorial} w-[290px] md:w-[325px] xl:w-[350px] h-[160px] md:h-[200px] xl:h-[225px] absolute bg-white rounded-[17px] border overflow-hidden`}>
         <div className="text-[#0054BB] pluto-black flex w-full px-2 h-full flex-col justify-center items-center text-center text-lg">
           <p className="pluto-black uppercase text-lg md:text-xl xl:text-2xl whitespace-pre tracking-tighter leading-5">{props.pregunta}</p>
           <p className="text-xs md:text-sm xl:text-base whitespace-pre tracking-tighter">{props.categoria}</p>

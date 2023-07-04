@@ -62,7 +62,7 @@ function Game(props: any) {
           />
         </div>
         <div className="z-10 absolute left-0 top-0 w-full h-full flex flex-col justify-start items-center">
-          <div className="h-1/3 md:h-2/5 w-full md:pt-16">
+          <div className="h-1/3 md:h-2/5 w-full md:pt-8 2xl:pt-16">
             <CardsNew enableControls={enableControls} setEnableControls={setEnableControls} countCards={props.countCards} changeCard={changeCard} tutorial={tutorial} setCardsCount={props.setCardsCount} />
           </div>
           <div className={`w-full h-2/3 md:h-2/5 relative box-border duration-300`}>

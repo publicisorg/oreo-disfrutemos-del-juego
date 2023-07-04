@@ -4,36 +4,32 @@ import DiceBox from '../diceboxCompiled/dice-box.es.js'
 import useSound from 'use-sound';
 
 function Dice(props: any) {
-
-    const [diceScale, setDiceScale] = useState(9);
     const [diceBox, setDiceBox] = useState<any>([]);
     const [diceBoxReady, setDiceBoxReady] = useState<any>([]);
     const [prepareDiceSound] = useSound('./assets/sounds/dice.mp3', { volume: 0.10 });
 
     function newDiceScale() {
+        var diceScale = 9;
         const width = window.innerWidth;
         const height = window.innerHeight;
         const absoluteResolution = width * height;
         if (absoluteResolution > 0 && absoluteResolution <= 786432) {
-            console.log(1);
-            setDiceScale(20);
+            diceScale = 20;
         }
         if (absoluteResolution > 786432 && absoluteResolution <= 921600) {
-            console.log(2);
-            setDiceScale(17);
+            diceScale = 17;
         }
         if (absoluteResolution > 921600 && absoluteResolution <= 1296000) {
-            console.log(3);
-            setDiceScale(15);
+            diceScale = 15;
         }
         if (absoluteResolution > 921600 && absoluteResolution <= 1296000) {
-            console.log(4);
-            setDiceScale(12);
+            diceScale = 12;
         }
+        return diceScale;
     }
 
     useEffect(() => {
-        newDiceScale();
+        var diceScale = newDiceScale();
         setDiceBox(new DiceBox("#dice-box", {
             assetPath: "/assets/dice-box/", // required
             theme: "default",

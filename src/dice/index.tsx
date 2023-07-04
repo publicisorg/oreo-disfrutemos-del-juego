@@ -17,7 +17,7 @@ function Dice(props: any) {
             diceScale = 15;
         }
         if (absoluteResolution > 786432 && absoluteResolution <= 921600) {
-            diceScale = 14;
+            diceScale = 9;
         }
         if (absoluteResolution > 921600 && absoluteResolution <= 1296000) {
             diceScale = 13;

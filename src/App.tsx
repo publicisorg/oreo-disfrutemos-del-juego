@@ -24,7 +24,7 @@ function App() {
 
   return (
     <>
-      <main className={`w-full h-full absolute flex flex-col justify-center items-center duration-300 overflow-x-hidden`}>
+      <main className={`w-full h-full absolute flex flex-col justify-center items-center duration-300 overflow-hidden`}>
         {showPopup && <DatosPersonales setShowPopup={setShowPopup} />}
         <Background />
         <Header />

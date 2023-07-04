@@ -17,7 +17,7 @@ function UI(props: any) {
 
     useEffect(() => {
         if (props.tutorial && window.innerWidth > 1023) {
-            setMargin("mt-40");
+            setMargin("mt-[30%]");
         }
         setButtonOpacity('opacity-100 scale-100');
     }, [])

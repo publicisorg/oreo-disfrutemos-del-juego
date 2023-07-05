@@ -25,7 +25,9 @@ function Dice(props: any) {
         if (absoluteResolution > 921600) {
             diceScale = 12;
         }
-        console.log
+        if (width < 640) {
+            diceScale = 16;
+        }
         return diceScale;
     }
 
@@ -66,7 +68,7 @@ function Dice(props: any) {
     }, [props.refreshDice])
 
     return (
-        <div id="dice-box" className={`w-full h-3/5 md:h-2/3 lg:h-full relative box-border duration-300`} />
+        <div id="dice-box" className={`w-full mt-8 sm:mt-0 h-2/5 sm:h-2/3 lg:h-full relative box-border duration-300`} />
     )
 }
 

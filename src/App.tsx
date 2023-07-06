@@ -16,6 +16,7 @@ function App() {
 
   function handleChange(data: any) {
     setStart(data);
+    console.log(showPopup);
   }
 
   useEffect(() => {
@@ -27,14 +28,14 @@ function App() {
   return (
     <>
       <main className={`w-full h-full absolute flex flex-col justify-center items-center duration-300 overflow-hidden`}>
-        {showPopup && <DatosPersonales setShowPopup={setShowPopup} />}
+        {false && <DatosPersonales setShowPopup={setShowPopup} />}
         <Background />
         <Header setShowShare={setShowShare} />
         {!start && <Home setStart={handleChange} />}
         {start && <Game setCardsCount={setCardsCount} countCards={countCards} />}
         {false && <FooterStart/>}
         {true && <Footer setShowShare={setShowShare} start={start} />}
-        {false && <SharePopUp setShowShare={setShowShare} start={start} />}
+        {showShare && <SharePopUp setShowShare={setShowShare} start={start} />}
       </main>
     </>
   );

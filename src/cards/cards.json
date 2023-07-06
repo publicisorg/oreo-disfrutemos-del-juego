@@ -1,23 +1,8 @@
 [
   {
-    "id": 1,
-    "pregunta": "¿Si todo el año fueran vacaciones? ¿Qué harías?",
-    "categoria": "Para pensar"
-  },
-  {
-    "id": 2,
-    "pregunta": "¿En qué momentos el tiempo pasa más rápido? ¿Por qué?",
-    "categoria": "Para compartir"
-  },
-  {
     "id": 3,
     "pregunta": "En 10” inventá una receta para la mejor merienda",
     "categoria": "Desafíos"
-  },
-  {
-    "id": 4,
-    "pregunta": "Si el tiempo se detuviera: ¿Qué pasaría?",
-    "categoria": "Elecciones"
   },
   {
     "id": 5,
@@ -40,49 +25,14 @@
     "categoria": "Elecciones"
   },
   {
-    "id": 9,
-    "pregunta": "¿Cuándo fue la última vez que te aburriste?",
-    "categoria": "Para pensar"
-  },
-  {
-    "id": 10,
-    "pregunta": "Tenés 24 hs para hacer LO QUE QUIERAS: ¿Qué harías?",
-    "categoria": "Para compartir"
-  },
-  {
     "id": 11,
     "pregunta": "Si pudieras regalarle un pasaje a una persona del juego, ¿A quién y a dónde lo llevarías?",
-    "categoria": "Desafíos"
-  },
-  {
-    "id": 12,
-    "pregunta": "Qué te pone de mejor humor: ¿Viernes por la tarde o Sábados a la mañana? ¿Por qué?",
-    "categoria": "Elecciones"
-  },
-  {
-    "id": 13,
-    "pregunta": "¿Qué te gustaría saber del futuro?",
-    "categoria": "Para pensar"
-  },
-  {
-    "id": 14,
-    "pregunta": "¿Qué te pone de buen humor a la mañana?",
-    "categoria": "Para compartir"
-  },
-  {
-    "id": 15,
-    "pregunta": "Tenés 30” para que el resto adivine la palabra 'tiempo', dibujando.",
     "categoria": "Desafíos"
   },
   {
     "id": 16,
     "pregunta": "¿Qué actividad compartirías con la persona que está a tu derecha?",
     "categoria": "Elecciones"
-  },
-  {
-    "id": 17,
-    "pregunta": "¿Sería mejor si los días duraran más horas? ¿Por qué?",
-    "categoria": "Para pensar"
   },
   {
     "id": 18,
@@ -100,69 +50,14 @@
     "categoria": "Elecciones"
   },
   {
-    "id": 21,
-    "pregunta": "¿Qué le regalarías a tu mejor amigo o amiga?",
-    "categoria": "Para pensar"
-  },
-  {
     "id": 22,
     "pregunta": "¿Cuál es tu juego favorito?",
     "categoria": "Para compartir"
   },
   {
-    "id": 23,
-    "pregunta": "Tenés 30” para dibujar o escribir tres cosas que asocies con el amor.",
-    "categoria": "Desafíos"
-  },
-  {
-    "id": 24,
-    "pregunta": "¿Cómo haces nuevas amistades?",
-    "categoria": "Elecciones"
-  },
-  {
-    "id": 25,
-    "pregunta": "En una cita imaginaria con vos mismo/a ¿A dónde vas?",
-    "categoria": "Para pensar"
-  },
-  {
-    "id": 26,
-    "pregunta": "¿Con quién te gustaría cenar esta noche?",
-    "categoria": "Para compartir"
-  },
-  {
-    "id": 27,
-    "pregunta": "¡Adivina-adivinador! Definí “amistad” sin decir: amigos/as diversión, persona, relación.",
-    "categoria": "Desafíos"
-  },
-  {
     "id": 28,
     "pregunta": "¿A dónde te gusta ir un viernes por la tarde?",
     "categoria": "Elecciones"
-  },
-  {
-    "id": 29,
-    "pregunta": "¿Se puede querer a un celular igual que a un gato?",
-    "categoria": "Para pensar"
-  },
-  {
-    "id": 30,
-    "pregunta": "¿Qué objeto le regalarías a una persona querida de tu familia? Elegí quién y decí qué cosa.",
-    "categoria": "Para compartir"
-  },
-  {
-    "id": 31,
-    "pregunta": "Mencioná el nombre de tu mejor amigo/a reemplazando las vocales por la letra “a”.",
-    "categoria": "Desafíos"
-  },
-  {
-    "id": 32,
-    "pregunta": "¿Qué lugar elegirías para ir de vacaciones con tu familia?",
-    "categoria": "Elecciones"
-  },
-  {
-    "id": 33,
-    "pregunta": "¿Qué cosas te gusta compartir con amigos/as?",
-    "categoria": "Para pensar"
   },
   {
     "id": 34,
@@ -175,58 +70,13 @@
     "categoria": "Desafíos"
   },
   {
-    "id": 36,
-    "pregunta": "¿Cómo es tu cara de selfie? Elegí alguien del juego para que la haga.",
-    "categoria": "Elecciones"
-  },
-  {
-    "id": 37,
-    "pregunta": "¿Le pedís ayuda a tus amigos/as? ¿En qué situaciones?",
-    "categoria": "Para pensar"
-  },
-  {
-    "id": 38,
-    "pregunta": "Para vos, ¿qué es lo mejor de tener un amigo/a?",
-    "categoria": "Para compartir"
-  },
-  {
     "id": 39,
     "pregunta": "En 20 segundos, nombrá 5 cosas que te guste mucho hacer.",
     "categoria": "Desafíos"
   },
   {
-    "id": 40,
-    "pregunta": "En 1” elijan un lugar al que quisieran ir a divertirse en familia.",
-    "categoria": "Elecciones"
-  },
-  {
-    "id": 41,
-    "pregunta": "¿Pueden hablar las personas con los animales?",
-    "categoria": "Para pensar"
-  },
-  {
     "id": 42,
     "pregunta": "Contá tres cosas que te definan.",
-    "categoria": "Para compartir"
-  },
-  {
-    "id": 43,
-    "pregunta": "Elegí alguien del juego y pedile que dibuje a su animal preferido en menos de 1 minuto!",
-    "categoria": "Desafíos"
-  },
-  {
-    "id": 44,
-    "pregunta": "¿Sobre quién o qué filmarías una película?",
-    "categoria": "Elecciones"
-  },
-  {
-    "id": 45,
-    "pregunta": "¿Cómo te ves en 10 años?",
-    "categoria": "Para pensar"
-  },
-  {
-    "id": 46,
-    "pregunta": "¿Quiénes son las personas con las que compartís tu vida?",
     "categoria": "Para compartir"
   },
   {
@@ -235,59 +85,14 @@
     "categoria": "Desafíos"
   },
   {
-    "id": 48,
-    "pregunta": "¿Qué tres elementos te llevarías a una isla desierta?",
-    "categoria": "Elecciones"
-  },
-  {
-    "id": 49,
-    "pregunta": "¿Qué es lo que más te gusta del lugar donde vivís?",
-    "categoria": "Para pensar"
-  },
-  {
     "id": 50,
     "pregunta": "¿Qué personaje de ficción te gustaría ser?",
     "categoria": "Para compartir"
   },
   {
-    "id": 51,
-    "pregunta": "En 30” decí 3 nombres que empiecen con la inicial del tuyo.",
-    "categoria": "Desafíos"
-  },
-  {
     "id": 52,
     "pregunta": "Si fueras un animal serías...",
     "categoria": "Elecciones"
-  },
-  {
-    "id": 53,
-    "pregunta": "Los animales, ¿tienen amigos/as?",
-    "categoria": "Para pensar"
-  },
-  {
-    "id": 54,
-    "pregunta": "¿Cómo te gustaría ser en 10 años?",
-    "categoria": "Para compartir"
-  },
-  {
-    "id": 55,
-    "pregunta": "Pensá un animal marino. El resto adivina. Respondé sin decir ni “si” ni “no” ni “blanco” ni “negro”",
-    "categoria": "Desafíos"
-  },
-  {
-    "id": 56,
-    "pregunta": "Elegí a alguien de la mesa y hablen como si fueran perros. ¿Se entienden?",
-    "categoria": "Elecciones"
-  },
-  {
-    "id": 57,
-    "pregunta": "¿Qué cosas pueden hacer las personas que los animales no?",
-    "categoria": "Para pensar"
-  },
-  {
-    "id": 58,
-    "pregunta": "¿Qué te preguntarías a vos mismo?",
-    "categoria": "Para compartir"
   },
   {
     "id": 59,
@@ -300,29 +105,9 @@
     "categoria": "Elecciones"
   },
   {
-    "id": 61,
-    "pregunta": "Los celulares: ¿pueden pensar?",
-    "categoria": "Para pensar"
-  },
-  {
-    "id": 62,
-    "pregunta": "Si tu computadora hablara: ¿qué te diría?",
-    "categoria": "Para compartir"
-  },
-  {
-    "id": 63,
-    "pregunta": "Describí un objeto simple (¡el que quieras!) usando más de 10 palabras.",
-    "categoria": "Desafíos"
-  },
-  {
     "id": 64,
     "pregunta": "Si fueras un electrodoméstico serías...",
     "categoria": "Elecciones"
-  },
-  {
-    "id": 65,
-    "pregunta": "¿Qué pensás que se necesita para ser artista?",
-    "categoria": "Para pensar"
   },
   {
     "id": 66,
@@ -330,49 +115,14 @@
     "categoria": "Para compartir"
   },
   {
-    "id": 67,
-    "pregunta": "¡Pedile a alguien que esté jugando que te dibuje en menos de 1 minuto!",
-    "categoria": "Desafíos"
-  },
-  {
-    "id": 68,
-    "pregunta": "¿Cuántos dibujos hacés usando solo 5 líneas rectas y un círculo?",
-    "categoria": "Elecciones"
-  },
-  {
-    "id": 69,
-    "pregunta": "¿Se podría jugar a un juego que no tiene reglas? ¿Cómo?",
-    "categoria": "Para pensar"
-  },
-  {
-    "id": 70,
-    "pregunta": "¿Cuál es el sueño más divertido que tuviste?",
-    "categoria": "Para compartir"
-  },
-  {
-    "id": 71,
-    "pregunta": "Elegí a alguien de la mesa. Armale una merienda con lo que hay en casa en 10 segundos.",
-    "categoria": "Desafíos"
-  },
-  {
     "id": 72,
     "pregunta": "¿Qué invento te gustaría crear?",
     "categoria": "Elecciones"
   },
   {
-    "id": 73,
-    "pregunta": "¿Podríamos entendernos si le cambiamos los nombres a las cosas?",
-    "categoria": "Para pensar"
-  },
-  {
     "id": 74,
     "pregunta": "¿Qué deseo le pedirías a un genio de la lámpara?",
     "categoria": "Para compartir"
-  },
-  {
-    "id": 75,
-    "pregunta": "Decí 3 cosas que haya en tu casa y que empiecen con la letra E.",
-    "categoria": "Desafíos"
   },
   {
     "id": 76,
@@ -395,16 +145,6 @@
     "categoria": "Desafíos"
   },
   {
-    "id": 80,
-    "pregunta": "Si tuvieras que elegir un juego para jugar toda la vida, ¿cuál sería?",
-    "categoria": "Elecciones"
-  },
-  {
-    "id": 81,
-    "pregunta": "¿Hay diferencias entre estar feliz y estar contento/a?",
-    "categoria": "Para pensar"
-  },
-  {
     "id": 82,
     "pregunta": "Sos feliz cuando...",
     "categoria": "Para compartir"
@@ -425,11 +165,6 @@
     "categoria": "Para pensar"
   },
   {
-    "id": 86,
-    "pregunta": "Buscá algo que te haga feliz y no lo muestres. ¿Alguien adivinó qué es?",
-    "categoria": "Para compartir"
-  },
-  {
     "id": 87,
     "pregunta": "Hacé la cara que ponés cuando cantan el “feliz cumpleaños”. Pedile a alguien que te imite.",
     "categoria": "Desafíos"
@@ -438,11 +173,6 @@
     "id": 88,
     "pregunta": "Inventá tres excusas para quedarte en tu casa jugando.",
     "categoria": "Elecciones"
-  },
-  {
-    "id": 89,
-    "pregunta": "¿Todas las personas necesitamos lo mismo para ser felices?",
-    "categoria": "Para pensar"
   },
   {
     "id": 90,
@@ -460,29 +190,9 @@
     "categoria": "Elecciones"
   },
   {
-    "id": 93,
-    "pregunta": "¿Sonreír es lo mismo que estar feliz?",
-    "categoria": "Para pensar"
-  },
-  {
-    "id": 94,
-    "pregunta": "En una merienda, ¿qué película que te hizo reír mucho volverías a ver?",
-    "categoria": "Para compartir"
-  },
-  {
-    "id": 95,
-    "pregunta": "¡Dibujá algo divertido! El primero que adivine qué es, gana.",
-    "categoria": "Desafíos"
-  },
-  {
     "id": 96,
     "pregunta": "Si tuvieras que elegir entre ser el más divertido o el más inteligente, ¿qué elegirías?",
     "categoria": "Elecciones"
-  },
-  {
-    "id": 97,
-    "pregunta": "¿Es importante reírse?",
-    "categoria": "Para pensar"
   },
   {
     "id": 98,
@@ -493,10 +203,5 @@
     "id": 99,
     "pregunta": "¡Juguemos a las adivinanzas! Pensá una adivinanza divertida y desafía a alguien a resolverla.",
     "categoria": "Desafíos"
-  },
-  {
-    "id": 100,
-    "pregunta": "Si pudieras elegir entre ser el protagonista de una comedia o un drama, ¿qué elegirías?",
-    "categoria": "Elecciones"
   }
 ]

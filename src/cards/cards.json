@@ -141,12 +141,12 @@
   },
   {
     "id": 79,
-    "pregunta": "Mantengan entre todas las personas una conversación de 10 segundos sin decir \"ni sí ni no ni blanco ni negro\".",
+    "pregunta": "Elegí una persona del juego y mantengan una conversación de 30 segundos sin decir \"ni si ni no ni blanco ni negro\".",
     "categoria": "Desafíos"
   },
   {
     "id": 82,
-    "pregunta": "Sos feliz cuando...",
+    "pregunta": "Si tuvieras que elegir un juego para jugar toda la vida ¿Cuál sería?.",
     "categoria": "Para compartir"
   },
   {
@@ -157,7 +157,7 @@
   {
     "id": 84,
     "pregunta": "Adiviná un momento feliz de otra persona que esté jugando. ¿Acertaste?",
-    "categoria": "Elecciones"
+    "categoria": "Desafíos"
   },
   {
     "id": 85,
@@ -191,17 +191,17 @@
   },
   {
     "id": 96,
-    "pregunta": "Si tuvieras que elegir entre ser el más divertido o el más inteligente, ¿qué elegirías?",
-    "categoria": "Elecciones"
+    "pregunta": "Elegí tu risa más graciosa, e intentá que el resto se ría.",
+    "categoria": "Para compartir"
   },
   {
     "id": 98,
-    "pregunta": "Contá una situación graciosa que te haya pasado.",
+    "pregunta": "Mi comida favorita es…",
     "categoria": "Para compartir"
   },
   {
     "id": 99,
-    "pregunta": "¡Juguemos a las adivinanzas! Pensá una adivinanza divertida y desafía a alguien a resolverla.",
-    "categoria": "Desafíos"
+    "pregunta": "Nombrá una canción que te alegre el día. ¿Te animás a cantarla?.",
+    "categoria": "Para compartir"
   }
 ]

@@ -98,7 +98,7 @@ export const CardsNew = (props: any) => {
         }
         selectCard = cardsTutorial[tutorialStage];
       } else {
-        selectCard = cards[Math.floor(Math.random() * 100)];
+        selectCard = cards[Math.floor(Math.random() * 40)];
       }
       setActualCard(selectCard);
       setTimeout(() => {

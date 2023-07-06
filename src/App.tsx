@@ -34,7 +34,7 @@ function App() {
         {start && <Game setCardsCount={setCardsCount} countCards={countCards} />}
         {false && <FooterStart/>}
         {true && <Footer setShowShare={setShowShare} start={start} />}
-        {showShare && <SharePopUp setShowShare={setShowShare} start={start} />}
+        {false && <SharePopUp setShowShare={setShowShare} start={start} />}
       </main>
     </>
   );

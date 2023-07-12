@@ -44,12 +44,12 @@ function SharePopUp(props: any) {
                             Compartí el juego con tus<br />amigos/as.
                         </p>
                         <div className="flex flex-row justify-center items-center gap-8">
-                            <a id="shareTwitter" target="_blank" href="https://twitter.com/intent/tweet?text=Cuando%20conectamos%20a%20trav%C3%A9s%20del%20juego%20disfrutamos%20m%C3%A1s,%20por%20eso%20creamos%20un%20juego%20de%20cartas%20con%20diferentes%20consignas,%20desaf%C3%ADos%20y%20preguntas.%20Ingres%C3%A1%20a%20www.DisfrutemosDelJuego.com%20y%20descubr%C3%AD%20el%20nuevo%20juego%20de%20oreo.">
+                            <a id="shareTwitter" target="_blank" href="https://twitter.com/intent/tweet?text=%C2%A1Nuevo%20Juego%20Oreo!%20Consignas,%20desaf%C3%ADos,%20y%20preguntas,%20para%20divertirse%20y%20conectar.%20Ingres%C3%A1%20en%20disfrutemosdeljuego.com%20y%20descubrilo">
                                 <div className="h-14 bg-gradient-to-r from-[#33CCFF] to-[#337fff] w-14 rounded-xl flex justify-center content-center items-center ">
                                     <FaTwitter size={32} />
                                 </div>
                             </a>
-                            <a id="shareWhatsapp" target="_blank" href="https://wa.me/?text=Cuando%20conectamos%20a%20trav%C3%A9s%20del%20juego%20disfrutamos%20m%C3%A1s,%20por%20eso%20creamos%20un%20juego%20de%20cartas%20con%20diferentes%20consignas,%20desaf%C3%ADos%20y%20preguntas.%20Ingres%C3%A1%20a%20www.DisfrutemosDelJuego.com%20y%20descubr%C3%AD%20el%20nuevo%20juego%20de%20oreo.">
+                            <a id="shareWhatsapp" target="_blank" href="https://wa.me/?text=%C2%A1Nuevo%20Juego%20Oreo!%20Consignas,%20desaf%C3%ADos,%20y%20preguntas,%20para%20divertirse%20y%20conectar.%20Ingres%C3%A1%20en%20disfrutemosdeljuego.com%20y%20descubrilo">
                                 <div className="h-14 bg-gradient-to-r from-[#60FC7C] to-[#4AB161] w-14 rounded-xl flex justify-center content-center items-center ">
                                     <FaWhatsapp size={32} />
                                 </div>

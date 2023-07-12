@@ -1,8 +1,5 @@
 <?php
 
-echo var_dump($_POST);
-return false;
-
 $servername = "localhost";
 $username = "oreo_juegoreo";
 $password = "W*P4rTh9gT";

@@ -24,26 +24,29 @@ function DatosPersonales(props: any) {
     }, [])
 
     async function postData() {
-        const response = await axios.post(
-            'https://disfrutemosdeljuego.com/oreojuego/postData.php',
-            {
-                mail: mail,
-                novedades: novedades
-            },
-            {
-                headers: {
-                    'Content-Type': 'application/json'
-                }
+        var bodyFormData = new FormData();
+        bodyFormData.append('mail', mail);
+        bodyFormData.append('novedades', novedades);
+        const response = await axios({
+            method: "post",
+            url: "https://disfrutemosdeljuego.com/oreojuego/postData.php",
+            data: bodyFormData,
+            headers: {
+                "Content-Type": "multipart/form-data"
             }
-        )
+        })
         return response;
     }
 
     function handleSubmit(e) {
-        console.log(e);
         e.preventDefault();
         postData().then((result: any) => {
-            console.log(result);
+            if (result.status == 200) {
+                console.log("Registro exitoso!");
+            } else {
+                console.log("Su correo no fue registrado :c");
+                console.log(result.error);
+            }
         })
         setFormOpacity("opacity-0");
         setTimeout(() => {

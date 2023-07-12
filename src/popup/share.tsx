@@ -38,7 +38,7 @@ function SharePopUp(props: any) {
                     </div>
                     <div className="px-4 pt-20 pb-12 flex flex-col justify-center items-center gap-6">
                         <p className="text-center text-lg">
-                            ¡Cuándo conectamos<br />a través del juego<br />disfrutamos más!
+                            ¡Cuando conectamos<br />a través del juego<br />disfrutamos más!
                         </p>
                         <p className="text-center text-xs">
                             Compartí el juego con tus<br />amigos/as.

@@ -138,8 +138,8 @@ function DatosPersonales(props: any) {
                                 </div>
                                 <div className="flex flex-row justify-start items-center gap-2 w-4/5">
                                     <input required id="politica" name="politica" type="checkbox" className="h-3 w-3" />
-                                    <label className="text-xs font-light" htmlFor="politica">Acepto <a href="https://disfrutemosdeljuego.com/oreojuego/bbcc.html" className="underline" target="_blank">la Política de privacidad de Oreo.</a><br/>
-                                    <a href="https://disfrutemosdeljuego.com/politicas_de_privacidad.html" className="underline"  target="_blank"> Ver Bases y condiciones</a></label>
+                                    <label className="text-xs font-light" htmlFor="politica">Acepto <a href="https://disfrutemosdeljuego.com/politicas_de_privacidad.html" className="underline" target="_blank">la Política de privacidad de Oreo.</a><br/>
+                                    <a href="https://disfrutemosdeljuego.com/oreojuego/bbcc.html" className="underline"  target="_blank"> Ver Bases y condiciones</a></label>
                                 </div>
                             </div>
                         </div>
